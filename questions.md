@@ -341,7 +341,7 @@ The *display* CSS property sets whether an element is treated as a block or inli
    NOTE4: If we want to width will be 50px set box-sizing: border-box;
 
 
-##  13. Whats is margins collapse
+##  13. What is margins collapse
 
 Vertical margins (top-bottom) are collapsed for 2 blocked elements.
 
@@ -427,3 +427,115 @@ https://habr.com/ru/articles/431046/
  - hidden:  do not show scrollbar, overflow content will be hidden
 
 More precise: overflow-x, overflow-y
+
+
+## 19. Floating elements (legacy => use flex)
+    
+  **float** 
+   - REMOVES element from main flow: BUT *inline* elements still see it
+
+   - width became the with of the content
+
+   - can be set to inline elements, in this case their behaviour will be as block element
+
+    float: left, right
+    
+    clear: both, left, right, none
+    
+RESUME: Its very complex with several nuances. USE FLEX!
+
+
+## 20. Setup font, text styles  
+
+*Safe fonts* - this font can be found on user computer. But it depends on OS.
+    
+ - font-weight:      100-900 (+100)   normal bold
+ - font-style:       normal, italic, cursive
+ - font-size:        40px
+ - color:            red
+ - text-decoration:  underline, overline, linethrew, none
+ - letter-spacing:   distance betwween letters 
+ - word-spacing:     distance between words
+ - line-height:      
+ - text-transform:   uppercase lowercase  capitilize none
+ - text-align:       left center right justify
+ - text-indent:      indent from left for the text
+ - font-kerning:     defines how letters are spaced
+ - font-synthesis:   property lets you specify whether or not the browser may synthesize 
+                     the bold, italic, small-caps, and/or subscript and superscript 
+                     typefaces when they are missing in the specified font-family.
+
+- font-synthesis-small-caps: lets you specify whether or not the browser may synthesize 
+                              small-caps typeface when it is missing in a font family.
+        
+
+  **font-family**
+   - Serif:        шрифты с зачечками на буквах
+   - Sans-serif:   без засечек на буквах
+   - Monospace:    the same width of the letter
+   - Cursive:
+   - Fantasy:
+    
+  NOTE: to direct include the font to the page use **font-face**
+
+	```
+    @font-face {
+		font-famile: "mefont";
+		src:  url("....")  format(),
+		src:  url("....")  format()
+	}     
+	```
+    
+The best browser compatibility is for TTF/OTF, WOFF, WOFF2
+
+- TrueType Fonts(TTF):  Developed by Apple and Microsoft in the late 1980s 
+
+- OpenType Fonts(OFF):  Scalable font by Microsoft in 1996
+                        Scalable font can increase in size without causing any degradation in the quality.
+
+- The Web Open Font Format (WOFF): Developed in 2009, recomended by W3C. WOFF is a font format for use in web pages.
+								   WOFF is essentially OpenType or TrueType with compression and additional metadata. 
+                                   The goal is to support font distribution from a server to a client over a network with bandwidth constraints.
+
+- WOFF 2.0: Better compression than WOFF 1.0
+
+- SVG Fonts/Shapes:  SVG fonts allow SVG to be used as glyphs when displaying text. 
+
+
+## 21. Border             
+
+ #### Border 
+  - border-width:
+  - border-style:  none, solid, dashed, dotted, double, groove, inset, upset   
+  - border-color:  
+  - border:        mix 3 upper properties, order doesn't matter
+
+More precise: border-left, border-right, border-top, border-bottom
+              border-left-color ......
+
+ #### Outline 
+
+ An outline is a line drawn outside the element's border.
+ An outline is a line that is drawn around elements, OUTSIDE the borders.
+ It **don't change the size of the box element** and can be set only for **all four side**.
+ But it helps for accessibility: it is border for element on focus
+
+  - outline-style
+  - outline-color
+  - outline-width
+  - outline-offset
+  - outline
+
+
+## 22. Shadows 
+
+On element:
+  - box-shadow:  inset | length | length | color
+                 inset: shadow will be shown inside element
+
+ Several shadows can be set, separated by comma
+
+ #### On text
+ - text-shadow:  offset-x | offset-y | blur-radius | color
+                 
+ Several shadows can be set, separated by comma
