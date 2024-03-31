@@ -118,40 +118,40 @@ Use *class* selector for styling the set of elements.
 	 
  - Selector only of DIRECT CHILD:  ```li > span { color: red; }```
 
-		   ```
-            <li>
-				<em><span> First </span></em>
-            </li>
-			<li>
-				<span> Second </span>
-			</li>
-			```
+		```
+		<li>
+			<em><span> First </span></em>
+		</li>
+		<li>
+			<span> Second </span>
+		</li>
+		```
 	
 	Will be applied ONLY to *Second* text: direct child( ```<span>``` ) of the parent ```<li>```
 	*First* has ```<em>``` element between.
 
  - Selector for NEXT CHILDREN: ```ul li + li { color:red; }```
 
-		    ```
-    	    <ul>
-		        <li> 1 </li>
-		        <li> 2 </li>                    
-		        <li> 3 </li>
-				<li> <em>4 </em></li>
-	        </ul>
-			```
+		```
+		<ul>
+			<li> 1 </li>
+			<li> 2 </li>                    
+			<li> 3 </li>
+			<li> <em>4 </em></li>
+		</ul>
+		```
 
 	Will be applied for *2* and *3* - the next elements(on the same level for firts ```<li>```)
 
 
  - Selector for FOLOWING ELEMENTS: ```br ~ p { color:red; }```
 
-		    ```
-            <br>
-               <p> Par3 </p>
-                <p> Par4 </p> 
-				<p> Par5 </p> 
-			```
+		```
+		<br>
+			<p> Par3 </p>
+			<p> Par4 </p> 
+			<p> Par5 </p> 
+		```
 
 	Will be applied for *Par3* and *Par4* and *Par5*
 
