@@ -287,3 +287,94 @@ that your design looks the same on different browsers. Two main approaches:
  - Normilize.css: normalize default browser styling, make the same for all browsers [Preferable]
     
 Inlcude reset/normilize.css as first css in you page.
+
+
+### 12. Block/Inline model CSS 
+
+*Block* element will take the whole line and *Inline* element take the inline place. 
+
+The *display* CSS property sets whether an element is treated as a block or inline box.
+  
+  - block: The element generates a block box, generating line breaks both before and after the element when in the normal flow
+
+  - inline: The element generates one or more inline boxes that do not generate line breaks before or after themselves. 
+            Any height and width properties will have no effect, in normal flow, the next element will be on the same line if there is space.
+
+  - inline-block: Displays an element as an inline-level block container. 
+                  The element itself is formatted as an inline element, but you can apply height and width values.
+
+  - flex: Displays an element as a block-level flex container
+
+  - grid: Displays an element as a block-level grid container
+
+ #### Margin 
+
+   Space between element and other element (between border and other element)
+             
+	- 10px              : all 10px
+    - 1px 2px 3px 4px   : top-right-left-right
+    - 10px 20px         : top-bottom  left-right
+    
+	More precise properties: margin-top, margin-right, margin-bottom , margin-left
+
+   NOTE1:   margin-top-bottom does NOT work for *inline* elements
+
+   NOTE2:   For boxing elements bottom and top margins can collapse
+
+   NOTE3:   For *inline* elements  width and height does NOT work
+
+
+ #### Padding 
+
+   Space between content and border  (between content and border)
+   Similar values to margin: padding, padding-top, padding-right, padding-bottom , padding-left
+
+
+ #### Box model of the element
+
+   L-margin <= border <= L-padding <= **CONTENT** => R-padding => border => R-margin
+   
+   Ex: If we set width=50px border=1px padding=10px margin=5px, 
+   
+   then total width will be: 50 + 1 + 10*2 + 5*2 = 82px.  Because box-sizing=content by default!
+
+   NOTE4: If we want to width will be 50px set box-sizing: border-box;
+
+
+###  13. Whats is margins collapse
+
+Vertical margins (top-bottom) are collapsed for 2 blocked elements.
+
+
+###  14. Positioning in CSS  
+
+We get HTML document, browser start to parse it and build DOM tree. Interpretator finds CSS and starts 
+to read it also. All elements are situated in the one main flow.
+
+ #### Position
+
+  - static:    Default value. We cannot move the element.   
+	              
+  - relative:  Can move element relatively its start position: top, right, bottom, left   
+	           Element situated in the new flow, its prevoius position remains blank! 
+			   The prevoius position names *shadow element*
+
+  - absolute:  Element situated in the new flow and REMOVES from main flow. All its prevoius space will take other elements.
+               Position relatively the first parent which has NON static position. Scroll make no sense.
+
+  - fixed:     Deleted from the main flow. New position will be relative to the browser window. 
+               Position of the parent make NO sense.
+
+  - sticky:    The element is positioned according to the normal flow of the document 
+  			   and then offset relative to its nearest scrolling ancestor
+
+
+###  15. Sizes of the element
+
+  - width 
+  - height
+  - min-width
+  - min-height
+  - max-width
+  - max-height
+
