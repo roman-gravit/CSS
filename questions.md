@@ -29,12 +29,13 @@ CSS rule consists of 2 elements:
 
 ## 3. Variants to add CSS 
 
- - Inline:     Add style directly to the element via attribyte: <div style="...."> It can be ovverride only with !important
+ - Inline:     Add style directly to the element via attribyte: 
+ 			   ```<div style="....">``` It can be ovverride only with !important
 
- - Internal:   Styling the entire webpage. Add <style> tag to the <head>
+ - Internal:   Styling the entire webpage. Add ```<style>``` tag to the ```<head>```
 	
- - Extrenal:   Styling in external *.css file.  Include it <link> tag inside <head>
-               <link href="...." rel="stylesheet" /> 
+ - Extrenal:   Styling in external *.css file.  Include it ```<link>``` tag inside ```<head>```
+               ```<link href="...." rel="stylesheet" />```
  
  - @import:    Add style via import directive
 
@@ -44,7 +45,7 @@ CSS rule consists of 2 elements:
  - Inline:              Specified for a specific occurrence of a tag and apply only to that tag. 
                         This is finegrain style, which defeats the purpose of style sheets - uniform style
 
- - Internal(Embedded):  Document-level css, apply to the whole document in which they appear, inside HEAD element
+ - Internal(Embedded):  Document-level css, apply to the whole document in which they appear, inside ```<head>``` element
 
  - External:            Can be applied to any number of documents
 
@@ -80,14 +81,14 @@ Selector is a part of the css rule. It can help to choose the element and set st
    	
  - universal(*): For all child elements, can be use for reset(normalize) css rules
 
- - tagName: Selector by element tag name, ex: h1 { color: red; }              
+ - tagName: Selector by element tag name, ex: ```h1 { color: red; }```             
      
- - class: Selector by class name, ex: .myclass { color: red; }  
+ - class: Selector by class name, ex: ```.myclass { color: red; }``` 
 
- - id: Selector by element *id* attribute, ex:  #main { color: red; }
+ - id: Selector by element *id* attribute, ex:  ```#main { color: red; }```
 	   *Id* must be unique on the HTML page.
 
-- tagName.class: More precise selector, combination of tag and class, ex: h1.myclass { color: red; }
+- tagName.class: More precise selector, combination of tag and class, ex: ```h1.myclass { color: red; }```
    
 Use *id* selector if you want to add some logic for exact element.
 Use *class* selector for styling the set of elements.
@@ -95,37 +96,46 @@ Use *class* selector for styling the set of elements.
 
 ### Complex selector(several)
 
- - Group selectors: Divided by comma, ex: h1, h2, h3 { color: red; }
+ - Group selectors: Divided by comma, ex:  ```h1, h2, h3 { color: red; }```
 
- - Pseudo class, ex:  a:hover
+ - Pseudo class, ex:  ```a:hover```
 
- - Pseudo element, ex:  li:first-child
+ - Pseudo element, ex:  ```li:first-child```
  
- - Selector of the element attribute, ex:  a[target]        
-      Exact attribute value: a[target="_blank"] 
-      Start of the attribute substring: a[href^="http"] 
-      End of the attribute substring: a[href$=".jpg"] 
-      Include of the attribute substring:   a[href*="todo"] 
+ - Selector of the element attribute, ex:  ```a[target]```:
+
+      **Exact** attribute value: ```a[target="_blank"]```
+ 
+      **Start** of the attribute substring: ```a[href^="http"]``` 
+ 
+      **End** of the attribute substring: ```a[href$=".jpg"]```
+ 
+      **Include** of the attribute substring:   ```a[href*="todo"]``` 
 
  - Selector of CHILD divided by space and applied only for LAST element in chain. 
-   Ex: div p span  { color: red; }, it will be applied only for *span*
+   
+   Ex: ```div p span  { color: red; }```, it will be applied only for *span*
 	 
- - Selector only of DIRECT CHILD:  li > span { color: red; }  `<br>`
-        Ex: 
+ - Selector only of DIRECT CHILD:  ```li > span { color: red; }```
+
+        Ex:
+
 		    ```
             <li>
-                <em><span> First </span></em>
-            </li>                              
-            <li>
-                <span> Second </span>
+				<em><span> First </span></em>
             </li>
-			```
+			<li>
+				<span> Second </span>
+			</li>
+			````
 	
-	Will be applied ONLY to *Second* text: direct child(<span>) of the parent <li>
-	*First* has <em> element between.
+	Will be applied ONLY to *Second* text: direct child(```<span>```) of the parent ```<li>```
+	*First* has ```<em>``` element between.
 
- - Selector for NEXT CHILDREN: ul li + li { color:red; } `<br>`
+ - Selector for NEXT CHILDREN: ```ul li + li { color:red; }```
+
         Ex: 
+
 		    ```
     	    <ul>
 		        <li> 1 </li>
@@ -134,10 +144,12 @@ Use *class* selector for styling the set of elements.
 				<li> <em>4 </em></li>
 	        </ul>
 			```
-	Will be applied for *2* and *3* - the next elements(on the same level for firts <li>)
+
+	Will be applied for *2* and *3* - the next elements(on the same level for firts ```<li>```)
 
 
- - Selector for FOLOWING ELEMENTS: br ~ p { color:red; }  `<br>`
+ - Selector for FOLOWING ELEMENTS: ```br ~ p { color:red; }```
+
         Ex: 
 		    ```
             <br>
@@ -145,6 +157,7 @@ Use *class* selector for styling the set of elements.
                 <p> Par4 </p> 
 				<p> Par5 </p> 
 			```
+
 	Will be applied for *Par3* and *Par4* and *Par5*
 
 Combinator explains the relationship between the selectors. There are four combinators in CSS:
