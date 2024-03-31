@@ -1,0 +1,30 @@
+.flex {
+	display: flex;
+}
+
+div .column {
+	width: 20%;
+}
+div .rounded {
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	border: 1px solid red;
+}
+div .circle {
+	border-radius: 50%;
+}
+div .top-left {
+	border-top-left-radius: 20px;
+}
+div .ellipse {
+	border-radius: 20px/40px;
+}
+
+.inside li {
+	list-style-position: inside;
+}
+.outside li {
+	list-style-position: outside;
+}

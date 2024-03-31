@@ -529,7 +529,7 @@ More precise: border-left, border-right, border-top, border-bottom
 
 ## 22. Shadows 
 
-On element:
+#### On element:
   - box-shadow:  inset | length | length | color
                  inset: shadow will be shown inside element
 
@@ -539,3 +539,51 @@ On element:
  - text-shadow:  offset-x | offset-y | blur-radius | color
                  
  Several shadows can be set, separated by comma
+
+
+## 23. Round corners
+
+
+ - border-radius:    40px:  all  OR  
+                     top-left top-right  bottom-right  bottom-left
+                     20px/40px : horiz/vertic  => ellipse
+
+More precise: border-top-left, border-top-right, border-bottom-left, border-bottom-right
+
+
+##  24. Lists                                
+
+ #### ol/ul
+
+ - list-style-type:      none, disk(defalt), circle, square, upper-alfa, lower-alfa,  decimal, upper-roman 
+ - list-style-position:  outside(default), inside
+ - list-style-image:     url("...")   
+ 
+ NOTE1: image size cannot be set in css
+
+
+##  25. Colors                                
+
+Note 1: **Specificationdefined named colors** (CSS 2.1): red, navy, white, yellow, red ....
+
+Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBorder, ButtonFace, InfoText... 
+
+  - HEX: 00ff00, 6-Hex Color, some colors can be shorten to 3-hex color
+    
+  - RGB: (0, 255, 0)
+    
+  - HSL(0, 100%, 50%), hue(оттенок)-saturaton(насыщенность)-lighness(священность)
+    
+  - RGBA, HSLA  => (alpha channel ~ opacity)
+     
+	 
+**currentcolor** Keyword:  refers to the value of the color property of an element
+
+	```
+	.class {
+		color: blue; 
+		border: 10px solid currentcolor; /* will be Blue */
+	}
+	```
+
+
