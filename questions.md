@@ -20,7 +20,7 @@ so CSS give a better look to HTML page in comparison to HTML attributes
 
 CSS rule consists of 2 elements:
  
- Rule: div { color: blue; }
+ Rule: ```div { color: blue; }```
  - selector: div
  - declaration block: { color: blue; }
 
@@ -34,7 +34,7 @@ CSS rule consists of 2 elements:
 
  - Internal:   Styling the entire webpage. Add ```<style>``` tag to the ```<head>```
 	
- - Extrenal:   Styling in external *.css file.  Include it ```<link>``` tag inside ```<head>```
+ - Extrenal:   Styling in external *.css file.  Include it via  ```<link>``` tag inside ```<head>```
                ```<link href="...." rel="stylesheet" />```
  
  - @import:    Add style via import directive
@@ -118,23 +118,19 @@ Use *class* selector for styling the set of elements.
 	 
  - Selector only of DIRECT CHILD:  ```li > span { color: red; }```
 
-        Ex:
-
-		    ```
+		   ```
             <li>
 				<em><span> First </span></em>
             </li>
 			<li>
 				<span> Second </span>
 			</li>
-			````
+			```
 	
-	Will be applied ONLY to *Second* text: direct child(```<span>```) of the parent ```<li>```
+	Will be applied ONLY to *Second* text: direct child( ```<span>``` ) of the parent ```<li>```
 	*First* has ```<em>``` element between.
 
  - Selector for NEXT CHILDREN: ```ul li + li { color:red; }```
-
-        Ex: 
 
 		    ```
     	    <ul>
@@ -150,7 +146,6 @@ Use *class* selector for styling the set of elements.
 
  - Selector for FOLOWING ELEMENTS: ```br ~ p { color:red; }```
 
-        Ex: 
 		    ```
             <br>
                <p> Par3 </p>
