@@ -295,6 +295,8 @@ Inlcude reset/normilize.css as first css in you page.
 
 The *display* CSS property sets whether an element is treated as a block or inline box.
   
+  - **none:**  Remove element form the flow.
+
   - **block:** The element generates a block box, generating line breaks both before and after the element when in the normal flow
 
   - **inline:** The element generates one or more inline boxes that do not generate line breaks before or after themselves. 
@@ -303,7 +305,7 @@ The *display* CSS property sets whether an element is treated as a block or inli
   - **inline-block:** Displays an element as an inline-level block container. 
                   The element itself is formatted as an inline element, but you can apply height and width values.
 
-  - **flex:** Displays an element as a block-level flex container
+  - **flex:** Displays an element as a block-level flex container. Setup flexible layout
 
   - **grid:** Displays an element as a block-level grid container
 
@@ -576,7 +578,7 @@ Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBo
     
   - RGBA, HSLA  => (alpha channel ~ opacity)
      
-	 
+
 **currentcolor** Keyword:  refers to the value of the color property of an element
 
 	```
@@ -586,4 +588,26 @@ Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBo
 	}
 	```
 
+##  26. Hide elements    
 
+  - display: none
+    Totaly remove element from the flow and DOM and not visible for SEO
+
+  - visibility: hidden
+    Was **not deleted** from flow, its still visible for search engines.
+
+  - opacity: 0
+    Was **not deleted** from flow, its still visible for search engines.
+
+
+##  27. Vender prefix and why do we need it 
+
+  --webkit-opacity   
+  --moz-opacity
+  --o-opacity
+  --ms-opacity
+    
+This css property is under construction or tesing in specific browser.
+Or this property is not in standart yet.
+    
+Note: Resource for tesing vender properties: caniuse.com
