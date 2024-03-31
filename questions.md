@@ -378,3 +378,52 @@ to read it also. All elements are situated in the one main flow.
   - max-width
   - max-height
 
+
+## 16. Units of sizes in CSS
+
+  #### Absolute
+	- px:  pixels 
+    - cm:  centimeters
+    - in:  inches
+    - mm:  millimeters
+    - pc:  picas
+    - pt:  points
+
+
+  #### Relative
+
+  |  Type     |    Name 			 | Description										   
+  |  :---     |  :---				 |  :---					    						   
+  |   %       |  percentage          | From the size of the **parent** element
+  |   em      | Font-sizes           | 1em=current font-size(16 by browser default) of the **parent**
+  |  rem      | Font-sizes           | 1em=current font-size of the BROWSER, to override: increase font for html or :root
+  | ex        | Character sizes      | x-height of the element's font.
+  | ch        | Character sizes      | The advance measure (width) of the glyph "0" of the element's font.
+  | vw/vh     | Viewpoint dimensions | visible part of the screen: 1% of the viewport's width/height
+  | vmax      | Viewpoint max        | 1% of the viewport's larger  dimension.
+  | vmin      | Viewpoint min        | 1% of the viewport's smaller dimension.
+    
+    function calc for with height =>  width: calc(100vh-100px) 
+
+
+## 17. z-index                       
+
+**z-index** determines the order of the element on the z-axis of the stacking context.
+Otherwise: the order how they appear in HTML document.
+
+**Only** for absolute and fixed positions.   
+Max for z-index=9999, can be negative.
+
+!!! MAKE NO SENSE FOR STATIC
+    
+https://habr.com/ru/articles/431046/
+ 
+
+## 18. Overflow of the element content
+
+ #### Overflow
+ - auto:    scrollbar will appear IF overflow
+ - scroll:  scrollbar will be shown ALWAYS
+ - hidden:  do not show scrollbar, overflow content will be hidden
+
+More precise: overflow-x, overflow-y

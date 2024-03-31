@@ -1,0 +1,45 @@
+.main {
+	display: flex;
+	font-size: 20px;
+}
+
+.column {
+	width: 20%;
+}
+
+.size-px li {
+	font-size: 16px;
+}
+.size-proc li {
+	font-size: 120%;
+}
+.size-em li {
+	font-size: 1.2em;
+}
+.size-rem li {
+	font-size: 1.2rem;
+}
+.size-ch li {
+	font-size: 3ch;
+}
+
+.size {
+	border: 1px solid red;
+	width: 150px;
+	height: 100px;
+}
+.unset {
+	overflow: unset;
+}
+.auto {
+	overflow: auto;
+}
+.scroll {
+	overflow: scroll;
+}
+.hidden {
+	overflow: hidden;
+}
+.visible {
+	overflow:visible;
+}
