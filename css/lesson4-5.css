@@ -1,0 +1,51 @@
+.first::first-letter {
+	color: red;
+}
+
+.second::first-line {
+	color: red;
+}
+
+.third::before {
+	content: "Hello! ";
+}
+
+.third::after {
+	content: " Bye!";
+}
+
+.four::selection {
+	color: greenyellow;
+	background-color: lightcoral;
+}
+
+#user-email::placeholder {
+	font-weight: bold;
+	opacity: 0.5;
+	color: red;
+}
+  
+div .column {
+	width: 10%;
+}
+.five li:first-child {
+	color: red;
+}
+.six li:last-child {
+	color: red;
+}
+.seven li:nth-child(even) {
+	color: red;
+}
+.eight li:nth-child(odd)  {
+	color: red;
+}
+.nine li:nth-child(2)  {
+	color: red;
+}
+.ten li:nth-child(3n)  {
+	color: red;
+}
+.eleven li:nth-child(3n+1)  {
+	color: red;
+}

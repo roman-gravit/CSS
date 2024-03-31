@@ -64,6 +64,7 @@ Priorites of these levels are:
 	```
 
 	b) Blue will win:
+
 	```
 	<link rel="stylesheet" href="../css/Lesson1-2.css">  => inside: ( .test-internal-external { color: yellow; } )
  	<style>
@@ -203,3 +204,86 @@ Need to summarize all selectors for the rule. Examples:
 | #test p              |  100+1  
 | h1 + *[href="test"]  |  1+10=11
 | #test:not(.main)     | 100+10=110
+
+
+### 7. What is pseudo-class 
+
+A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element:
+
+	:hover  
+	:visited  
+	:active 
+	:focus
+	:first-child :last-child  
+	:nth-child(even)  
+	:nth-child(odd)  
+	:nth-child(n)  
+	:nth-child(2n) 
+	:nth-child(3n+1)
+	:first-of-type  
+	:last-of-type   
+	:nth-of-type
+	:not
+
+
+### 8. What is pseudo-element 
+
+Added to css selector with :: and changed the element structure:
+
+	::first-line  
+	::first-letter  
+	::marker  
+	::placeholder
+    ::selection (only for color and background-color)
+    ::after 
+	::before (with content only)
+
+
+### 9. CSS Cascade
+
+The cascade is an algorithm that defines how user agents combine property values originating from different sources.
+When a selector matches an element, the property value from the origin with the highest precedence gets applied, 
+even if the selector from a lower precedence origin or layer has greater specificity.
+
+Brief
+
+  Importance -> Specificity -> Source order
+
+    
+More details
+
+|       Order                  |    			Description												 |
+|------------------------------|:-----------------------------------------------------------------------:|
+| 1. Relevance                 | It first filters all the rules from the different sources to keep only the rules that apply to a given 
+|                              | element. That means rules whose selector matches the given element and which are part
+|                              | of an appropriate media at-rule
+| 2. Origin and importance     | Then it sorts these rules according to their importance, that is, whether or not they are 
+|                              | followed by *!important*, and by their origin. Ignoring layers for the moment, the cascade 
+|                              | order is as follows
+| 3. Specificity               | The specificity of the selectors are compared, and the declaration with the highest specificity wins
+| 4. Scoping proximity         | When two selectors in the origin layer with precedence have the same specificity, the property value 
+|                              | within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins.
+| 5. Order of appearance       | The last declaration in the style order is applied
+
+
+### 10. Cascading inheritance
+
+ - There are properties which can be inherit: font, color...
+
+ - Which DO NOT inherite from the parent element: border, margins, padding...
+   
+ - Manual property inheritance can be applyed:   ```div { border: inherit; }```
+
+Note: Each browser has its onw table of default styles for elements. 
+
+
+### 11. Whats is cross browsing CSS compatibility
+
+Browser has its own styling. Need to correct behaviour on different browsers in order
+that your design looks the same on different browsers. Two main approaches:
+
+ - Reset.css: erase to 0 all browser styles
+    
+ - Normilize.css: normalize default browser styling, make the same for all browsers [Preferable]
+    
+Inlcude reset/normilize.css as first css in you page.
