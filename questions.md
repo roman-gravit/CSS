@@ -76,7 +76,7 @@ Priorites of these levels are:
 
 Selector is a part of the css rule. It can help to choose the element and set style for it.
    
-#### Simple selectors(containt single selector):                                               
+### Simple selectors(containt single selector):                                               
    	
  - universal(*): For all child elements, can be use for reset(normalize) css rules
 
@@ -93,7 +93,7 @@ Use *id* selector if you want to add some logic for exact element.
 Use *class* selector for styling the set of elements.
 
 
-#### Complex selector(several)
+### Complex selector(several)
 
  - Group selectors: Divided by comma, ex: h1, h2, h3 { color: red; }
 
@@ -110,7 +110,7 @@ Use *class* selector for styling the set of elements.
  - Selector of CHILD divided by space and applied only for LAST element in chain. 
    Ex: div p span  { color: red; }, it will be applied only for *span*
 	 
- - Selector only of DIRECT CHILD:  li > span { color: red; } 
+ - Selector only of DIRECT CHILD:  li > span { color: red; }  `<br>`
         Ex: 
 		    ```
             <li>
@@ -124,7 +124,7 @@ Use *class* selector for styling the set of elements.
 	Will be applied ONLY to *Second* text: direct child(<span>) of the parent <li>
 	*First* has <em> element between.
 
- - Selector for NEXT CHILDREN: ul li + li { color:red; }
+ - Selector for NEXT CHILDREN: ul li + li { color:red; } `<br>`
         Ex: 
 		    ```
     	    <ul>
@@ -137,7 +137,7 @@ Use *class* selector for styling the set of elements.
 	Will be applied for *2* and *3* - the next elements(on the same level for firts <li>)
 
 
- - Selector for FOLOWING ELEMENTS: br ~ p { color:red; }
+ - Selector for FOLOWING ELEMENTS: br ~ p { color:red; }  `<br>`
         Ex: 
 		    ```
             <br>
