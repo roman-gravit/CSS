@@ -206,7 +206,7 @@ Need to summarize all selectors for the rule. Examples:
 | #test:not(.main)     | 100+10=110
 
 
-### 7. What is pseudo-class 
+## 7. What is pseudo-class 
 
 A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element:
 
@@ -226,7 +226,7 @@ A CSS pseudo-class is a keyword added to a selector that specifies a special sta
 	:not
 
 
-### 8. What is pseudo-element 
+## 8. What is pseudo-element 
 
 Added to css selector with :: and changed the element structure:
 
@@ -239,7 +239,7 @@ Added to css selector with :: and changed the element structure:
 	::before (with content only)
 
 
-### 9. CSS Cascade
+## 9. CSS Cascade
 
 The cascade is an algorithm that defines how user agents combine property values originating from different sources.
 When a selector matches an element, the property value from the origin with the highest precedence gets applied, 
@@ -266,7 +266,7 @@ More details
 | 5. Order of appearance       | The last declaration in the style order is applied
 
 
-### 10. Cascading inheritance
+## 10. Cascading inheritance
 
  - There are properties which can be inherit: font, color...
 
@@ -277,7 +277,7 @@ More details
 Note: Each browser has its onw table of default styles for elements. 
 
 
-### 11. Whats is cross browsing CSS compatibility
+## 11. Whats is cross browsing CSS compatibility
 
 Browser has its own styling. Need to correct behaviour on different browsers in order
 that your design looks the same on different browsers. Two main approaches:
@@ -289,7 +289,7 @@ that your design looks the same on different browsers. Two main approaches:
 Inlcude reset/normilize.css as first css in you page.
 
 
-### 12. Block/Inline model CSS 
+## 12. Block/Inline model CSS 
 
 *Block* element will take the whole line and *Inline* element take the inline place. 
 
@@ -341,12 +341,12 @@ The *display* CSS property sets whether an element is treated as a block or inli
    NOTE4: If we want to width will be 50px set box-sizing: border-box;
 
 
-###  13. Whats is margins collapse
+##  13. Whats is margins collapse
 
 Vertical margins (top-bottom) are collapsed for 2 blocked elements.
 
 
-###  14. Positioning in CSS  
+##  14. Positioning in CSS  
 
 We get HTML document, browser start to parse it and build DOM tree. Interpretator finds CSS and starts 
 to read it also. All elements are situated in the one main flow.
@@ -369,7 +369,7 @@ to read it also. All elements are situated in the one main flow.
   			   and then offset relative to its nearest scrolling ancestor
 
 
-###  15. Sizes of the element
+##  15. Sizes of the element
 
   - width 
   - height
