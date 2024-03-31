@@ -353,19 +353,19 @@ to read it also. All elements are situated in the one main flow.
 
  #### Position
 
-  - static:    Default value. We cannot move the element.   
+  - **static:**    Default value. We cannot move the element.   
 	              
-  - relative:  Can move element relatively its start position: top, right, bottom, left   
+  - **relative:**  Can move element relatively its start position: top, right, bottom, left   
 	           Element situated in the new flow, its prevoius position remains blank! 
 			   The prevoius position names *shadow element*
 
-  - absolute:  Element situated in the new flow and REMOVES from main flow. All its prevoius space will take other elements.
+  - **absolute:**  Element situated in the new flow and REMOVES from main flow. All its prevoius space will take other elements.
                Position relatively the first parent which has NON static position. Scroll make no sense.
 
-  - fixed:     Deleted from the main flow. New position will be relative to the browser window. 
+  - **fixed:**     Deleted from the main flow. New position will be relative to the browser window. 
                Position of the parent make NO sense.
 
-  - sticky:    The element is positioned according to the normal flow of the document 
+  - **sticky:**    The element is positioned according to the normal flow of the document 
   			   and then offset relative to its nearest scrolling ancestor
 
 
