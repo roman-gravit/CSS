@@ -3,8 +3,10 @@
 
  ## 1. What is CSS
 
- Cascading Style Sheets, add visal effects to the HTML page.
+ CSS(Cascading Style Sheet: add visal effects to the HTML page.
  Number of rules which tell browser how to display elements on the page, color, font.
+
+ History:
   - CSS1 was developed in 1996
   - CSS2 was developed in 1998
   - CSS3 was published as a W3C Recommendation in 2011.
@@ -27,8 +29,7 @@ CSS rule consists of 2 elements:
 
 ## 3. Variants to add CSS 
 
- - Inline:     Add style directly to the element via attribyte: <div style="....">
-               It can be ovverride only with !important
+ - Inline:     Add style directly to the element via attribyte: <div style="...."> It can be ovverride only with !important
 
  - Internal:   Styling the entire webpage. Add <style> tag to the <head>
 	
@@ -51,22 +52,25 @@ Priorites of these levels are:
  - *inline* has the highest priority
  - *internal* and *external* has the same priority, it depends on which style was enabled later:
 	
-	a) Yellow will win
+	a) Yellow will win:
+	```
  	<style>
 		.test-internal-external {
 			color: blue;
 		}
 	</style>
 	<link rel="stylesheet" href="../css/Lesson1-2.css">  => inside: ( .test-internal-external { color: yellow; } )
+	```
 
-	b) Blue will win
+	b) Blue will win:
+	```
 	<link rel="stylesheet" href="../css/Lesson1-2.css">  => inside: ( .test-internal-external { color: yellow; } )
  	<style>
 		.test-internal-external {
 			color: blue;
 		}
 	</style>
-
+	```
 
 ## 5. What is style selector 
 
