@@ -1,0 +1,36 @@
+/** It will not work because we have the same internal style in HEAD */
+.test-internal-external {
+	color: yellow;
+}
+
+.external {
+	color: lightgreen;
+}
+
+a[target=_blank] {
+	color: red;
+}
+
+a[href^=file] {
+	color: blue;
+}
+
+a[href*="todo"] {
+	color: lightcoral;
+}
+
+a[href$=".jpg"] {
+	color: lightgreen;
+}
+
+li > span { 
+	color: red; 
+} 
+
+ul li + li { 
+	color:red; 
+}
+
+br ~ p { 
+	background-color:red; 
+}
