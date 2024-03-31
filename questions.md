@@ -29,25 +29,25 @@ CSS rule consists of 2 elements:
 
 ## 3. Variants to add CSS 
 
- - Inline:     Add style directly to the element via attribyte: 
+ - **Inline:**     Add style directly to the element via attribyte: 
  			   ```<div style="....">``` It can be ovverride only with !important
 
- - Internal:   Styling the entire webpage. Add ```<style>``` tag to the ```<head>```
+ - **Internal:**   Styling the entire webpage. Add ```<style>``` tag to the ```<head>```
 	
- - Extrenal:   Styling in external *.css file.  Include it via  ```<link>``` tag inside ```<head>```
+ - **Extrenal:**   Styling in external *.css file.  Include it via  ```<link>``` tag inside ```<head>```
                ```<link href="...." rel="stylesheet" />```
  
- - @import:    Add style via import directive
+ - **@import:**    Add style via import directive
 
 
 ## 4. How many types of levels in style sheets
 
- - Inline:              Specified for a specific occurrence of a tag and apply only to that tag. 
+ - **Inline:**              Specified for a specific occurrence of a tag and apply only to that tag. 
                         This is finegrain style, which defeats the purpose of style sheets - uniform style
 
- - Internal(Embedded):  Document-level css, apply to the whole document in which they appear, inside ```<head>``` element
+ - **Internal(Embedded):**  Document-level css, apply to the whole document in which they appear, inside ```<head>``` element
 
- - External:            Can be applied to any number of documents
+ - **External:**            Can be applied to any number of documents
 
 Priorites of these levels are: 
  - *inline* has the highest priority
