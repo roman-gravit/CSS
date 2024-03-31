@@ -155,30 +155,35 @@ Combinator explains the relationship between the selectors. There are four combi
 Specificity is the algorithm used by browsers to determine the CSS declaration that is 
 the most relevant to an element, which in turn, determines the property value to apply to the element.
 
-Selector weight: 
- - Inline:                         1-0-0-0   
- - Id:                             0-1-0-0   
- - Class/Attr/Pseudo-class:        0-0-1-0  
- - Element(tag)/Pseudo-element:    0-0-0-1   
- - Universal(*):                   0-0-0-0
+Selector weight 
+
+|   Selector                   |  Weight  
+|------------------------------|:-----------:|
+| Inline                       |   1-0-0-0   
+| Id                           |   0-1-0-0   
+| Class/Attr/Pseudo-class      |   0-0-1-0  
+| Element(tag)/Pseudo-element  |   0-0-0-1   
+| Universal(*)                 |   0-0-0-0
     
 
-Need to summarize all selectors for the rule.
-Examples:  
 
-  h1                       1                        
-  .myclass                 10    
-  h1.myclass             10+1=11          
-  #main                   100
-  body h1.myclass       10+1+1=12
-  p:first-line           1+1=2   
-  h2 strong              1+1=2    
-  span.test ul li       10+1+1=13
-  a:hover                1+10=11      
-  ul ol+li               1+1+1=3  
-  ul li                   1+1=2   
-  ul ol li.item          1+1+1+10
-  li.item.main          1+10+10=21   
-  #test p                100+1  
-  h1 + *[href="test"]   1+10=11
-  #test:not(.main)     100+10=110
+Need to summarize all selectors for the rule. Examples:  
+                
+|   Selector           |  Summa  
+|----------------------|:-----------:|
+| h1      			   |   1    
+| .myclass       	   |   10    
+| h1.myclass      	   |   11    
+| #main     		   |   100   
+| body h1.myclass  	   |   10+1+1-12    
+| p:first-line    	   |   1+1=2  
+| h2 strong    	       |   1+1=2  
+| span.test ul li      |   10+1+1=13    
+| a:hover              |  1+10=11      
+| ul ol+li             |  1+1+1=3  
+| ul li                |   1+1=2   
+| ul ol li.item        |  1+1+1+10
+| li.item.main         |  1+10+10=21   
+| #test p              |  100+1  
+| h1 + *[href="test"]  |  1+10=11
+| #test:not(.main)     | 100+10=110
