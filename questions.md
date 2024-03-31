@@ -295,17 +295,17 @@ Inlcude reset/normilize.css as first css in you page.
 
 The *display* CSS property sets whether an element is treated as a block or inline box.
   
-  - block: The element generates a block box, generating line breaks both before and after the element when in the normal flow
+  - **block:** The element generates a block box, generating line breaks both before and after the element when in the normal flow
 
-  - inline: The element generates one or more inline boxes that do not generate line breaks before or after themselves. 
+  - **inline:** The element generates one or more inline boxes that do not generate line breaks before or after themselves. 
             Any height and width properties will have no effect, in normal flow, the next element will be on the same line if there is space.
 
-  - inline-block: Displays an element as an inline-level block container. 
+  - **inline-block:** Displays an element as an inline-level block container. 
                   The element itself is formatted as an inline element, but you can apply height and width values.
 
-  - flex: Displays an element as a block-level flex container
+  - **flex:** Displays an element as a block-level flex container
 
-  - grid: Displays an element as a block-level grid container
+  - **grid:** Displays an element as a block-level grid container
 
  #### Margin 
 
