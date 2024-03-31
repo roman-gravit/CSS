@@ -253,7 +253,7 @@ Brief
 More details
 
 |       Order                  |    			Description												 |
-|------------------------------|:-----------------------------------------------------------------------:|
+|  :---                        |  :---																	 |
 | 1. Relevance                 | It first filters all the rules from the different sources to keep only the rules that apply to a given 
 |                              | element. That means rules whose selector matches the given element and which are part
 |                              | of an appropriate media at-rule
