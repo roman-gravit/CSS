@@ -694,7 +694,7 @@ Transformed element will **not touch the rounded elements**. Transforms can be c
   - transform-origin:  right bottom left top  => change the basic point
                        pixels, procenteges
 
-##  33. Transitions                           
+## 33. Transitions                           
 
   ####  transition
 
@@ -713,3 +713,44 @@ Transformed element will **not touch the rounded elements**. Transforms can be c
 
  Combined single rule:
    - transition:   properties |  duration  | function  |  delay 
+
+
+## 34. Animations                          
+
+Animation can do multiply transitions in many loops, also it can be stopped.
+
+At the beginning key-frames should be deteremined.
+
+  **Step 1:** Determine of the animation: with 3 frames(from, 50%, to)
+
+              Other frames can be added:
+
+			  ```
+              @key-frames  myAnimation {
+                  from {  background-color: red;   }
+                  50%  {  background-color: blue;  }
+                  to   {  background-color: green; }
+              }
+			  ```
+
+
+   **Step 2:** Do this animation for the target element:
+
+   			```
+            <target>  div {
+                anumation-name:             myAnimation;
+                animation-duration:         5s;  (500ms);
+                animation-timing-function:  linear ... (the same as transition)
+                animation-iteration-count:  num (default =1)  infinity
+                animation-direction:        normal | alternate | reverse | alternate-reverse 
+                animation-play-state:       paused | running
+                animation-fill-mode:        forwards
+                animation-delay:            1s 500ms  
+            }
+			```
+
+Combined single rule:
+  - animation:   none | duration | function | delay |  iteration-count | direction | fill-mode
+                (minimum 4 must be set)
+
+Several animations can be set for single target element.
