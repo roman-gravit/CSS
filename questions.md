@@ -754,3 +754,32 @@ Combined single rule:
                 (minimum 4 must be set)
 
 Several animations can be set for single target element.
+
+
+##  33. Tables                               
+
+  - **border**:             1px soild red;
+
+  - **border-collapse:**    separate(defalt) - will be double border
+                            collapse         - single
+    
+  - **border-spacing:**     10px | (horiz, vert)  difference between borders
+
+  - **caption-side:**       top(default) | bottom
+
+  - **text-align:**         left | center | right
+    
+  - **vertical-align:**     baseline | bottom | middle | sub | super | text-bottom | text-top | top
+    
+  - **empty-cells:**        show(default) | hide 
+
+
+##  34. Cursors                              
+
+  - **pointer-events:**  Sets under what circumstances (if any) a particular graphic element can become the target 
+  						 of pointer events. Can be used for disabled buttons or prohibit text selection. 
+                         auto(default) | none
+        
+  - **pointer:**     hand | crosshair | copy | progress:   wait:
+
+  - **url(...):** image for cursor
