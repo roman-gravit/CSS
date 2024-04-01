@@ -756,7 +756,7 @@ Combined single rule:
 Several animations can be set for single target element.
 
 
-##  33. Tables                               
+##  35. Tables                               
 
   - **border**:             1px soild red;
 
@@ -774,7 +774,7 @@ Several animations can be set for single target element.
   - **empty-cells:**        show(default) | hide 
 
 
-##  34. Cursors                              
+##  36. Cursors                              
 
   - **pointer-events:**  Sets under what circumstances (if any) a particular graphic element can become the target 
   						 of pointer events. Can be used for disabled buttons or prohibit text selection. 
@@ -783,3 +783,28 @@ Several animations can be set for single target element.
   - **pointer:**     hand | crosshair | copy | progress:   wait:
 
   - **url(...):** image for cursor
+
+
+##  37. Text effects                         
+
+  - text-overflow:  ellipsis - ...
+                    clip - text will be cuted
+    
+  - white-space:    nowrap - single line
+    
+  - word-wrap:      break-word - word will be wrap to next line
+  
+  - word-break:     normal(default) | break-all;
+
+  - writing-mode:   vertical  vertical-lr
+
+ Multicolumn  text can be divided to columns. Need to set in parent element (```<div>```)
+
+  - column-count:  N
+    
+  - column-rule:   1px solid grey
+    
+  - column-width:  auto(default) | 300px
+    
+  - column-gap:    100px    space between columns
+
