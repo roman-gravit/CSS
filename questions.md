@@ -611,3 +611,30 @@ This css property is under construction or tesing in specific browser.
 Or this property is not in standart yet.
     
 Note: Resource for tesing vender properties: caniuse.com
+
+
+## 28. What is BEM
+
+The term BEM stands for Block-Element-Modifier, which is a naming convention for CSS class 
+
+names that helps to maintain a clear and consistent structure in a project's styling.
+
+Component approach for web development, of reusing the component
+
+
+## 29. Background
+
+  - background-color:      color
+  - background-image:      url(...)
+  - background-size:       contain, cover   (100px 200px)-it will duplicate by default
+  - background-repeat:     no-repeat, repeat-x, repeat-y
+  - background-position:   left, center, right, bottom
+  - background-position-x:  %   or  px  => shift image horiz or verticaly
+  - background-position-y:
+  - background-attachment:  fixed  => image will be always visible, not depending on scroll
+    
+Summary:
+  - background:  color | image | position | repeat | attachment 
+    
+Note: Separated by comma, we can add several background images
+
