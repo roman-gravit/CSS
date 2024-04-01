@@ -50,16 +50,16 @@ Everything we do with flexbox refers back to these axes, so it is worth understa
 
  - **align-self:**    stretch(default) | center | flex-start | flex-end
 
- - **flex-grow:**
+ - **flex-grow:**     N: Specifies how much of the flex container's **remaining space** should be assigned to the flex item.
 
- - **flex-shrink:**
+ - **flex-shrink:**   N: Sets the flex shrink factor of a flex item.
 
- - **flex-basis:**
+ - **flex-basis:**    auto | 0 | px | rem | em.  Sets the initial main size of a flex item. **Only for main-axis**
 
- - **flex:**
+ - **flex:**          Shorthand property for: flex-grow, flex-shrink and flex-basis
 
- - **order:**
+ - **order:**         N: Sets the order to lay out an item in a flex or grid container. 
+                      (Default:0). Can be minimum.
 
 
-To test your knowledge in flex
- https://flexboxfroggy.com/
+To test your knowledge in flex:  https://flexboxfroggy.com/
