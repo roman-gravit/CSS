@@ -638,3 +638,34 @@ Summary:
     
 Note: Separated by comma, we can add several background images
 
+
+## 30. Gradient                              
+
+  #### linear                               
+    - background/background-image: linear-gradient(90dep,   black,   white..... other colors)
+                                    to top right   can use px and there is 2nd parameter
+                                    repeating-linear-gradient
+  #### radial
+    - background: radial-gradient([elipse/circle], startcolor, endcolor)
+                  closest-side  closest-corner  farhtest-side  farthest-corner
+				  repeating-radial-gradient
+
+## 31. Filters                             
+
+Add visual effects for elements. Filters can be combined.
+    
+  #### filter 
+   - blur:         blur deapth   2px
+   - drop-shadow:  horiz shift    vertic shift    blur  цвет 
+                   NOTE: shadow will be applyed to *content* of the pseudo after/before also
+                              useful for bottom triangle (like in tooltip)
+   - greyscale:    (0-100%) 
+   - brightness:   (-50 +150%)
+   - contrast:     (-50 +150%)
+   - hue-rotate:   (deg 0-360)  
+   - invert:       (0-100%)
+   - saturate:     (0-1000%)     aka contrast
+   - sepia:        (0-100%)      old look
+   - opacity:      (0-100%) 
+   - url(file.svg#filter-element-id)    You can use url() to reference an SVG filter element. 
+                                        For a reference to an SVG <filter> element, use the following syntax
