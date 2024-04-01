@@ -39,21 +39,27 @@ Everything we do with flexbox refers back to these axes, so it is worth understa
  - **justify-content:**  flex-start | center | flex-end | space-between | space-around | space-evenly. 
                          Align items along the **main-axis.**
 
- - **align-items:**  stretch | center | start |  end. Align items along the **cross-axis.** 
+ - **align-items:**  stretch(default) | center | flex-start |  flex-end | baseline. 
+                     Align items along the **cross-axis.** 
 
- - **align-content:**  start | center | space-between | space-around 
-
+ - **align-content:**  stretch(default) | flex-start | flex-end | center | space-between | space-around. For multiline alignment.
+                       **Will work only if flex-wrap = wrap**
+    
 
 #### Item Properties ####
 
- - align-self
+ - **align-self:**    stretch(default) | center | flex-start | flex-end
 
- - flex-grow
+ - **flex-grow:**
 
- - flex-shrink
+ - **flex-shrink:**
 
- - flex-basis
+ - **flex-basis:**
 
- - flex
+ - **flex:**
 
- - order
+ - **order:**
+
+
+To test your knowledge in flex
+ https://flexboxfroggy.com/
