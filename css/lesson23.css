@@ -1,0 +1,36 @@
+.text {
+	font-size: 24px;
+	padding: 5px 10px;
+}
+
+.text::placeholder {
+	color: blue;
+}
+
+
+
+.flex {
+	display: flex;
+}
+.wrapper {
+	width: 15vw;
+	height: 25vh;
+	margin: 10px;
+	border: 2px solid gray;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 35px;
+	background: lightgoldenrodyellow;
+}
+
+::-webkit-scrollbar-track {
+	border: 2px solid blue;
+	box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background:  linear-gradient(45deg, red);
+}

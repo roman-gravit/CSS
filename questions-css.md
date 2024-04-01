@@ -859,3 +859,35 @@ There are some rules to make the page responsive:
  - Size of the fonts
     
  - Hide some media content or simple content
+
+
+
+##  39. Placeholders styling                 
+
+Use **::placeholder**  pseudo-class for changing placeholder style.
+    
+It will not work for complex elements (date, or smth with dropdown)
+
+
+##  40. Scrollbars styling                    
+
+  - webkit-scrollbar:           the whole scrollbat itself
+  
+  - webkit-scrollbar-track:     space under the scroll, progress bar of the scrollbar.
+  
+  - webkit-scrollbar-thumb:     the draggable scrolling handle - сам ползунок
+    
+  - webkit-scrollbar-button:    the buttons on the scrollbar (arrows pointing upwards and downwards)
+
+
+##  41. What is CSS sprite                   
+
+CSS Sprites are a collection of images that are combined into a single file that an HTML document can access.
+Mostlikely is used for icons.
+
+Use: 
+  - background-position
+
+  - background-size
+
+  - background-image
