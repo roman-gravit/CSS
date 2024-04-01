@@ -694,3 +694,22 @@ Transformed element will **not touch the rounded elements**. Transforms can be c
   - transform-origin:  right bottom left top  => change the basic point
                        pixels, procenteges
 
+##  33. Transitions                           
+
+  ####  transition
+
+   - transition-duration:  (seconds)  1s  0.5s  500ms, can set each duration for each property, separated by comma
+
+   - transition-property:  color | all   
+                           transform => only size will be changed
+                           can combine properties separated by comma
+
+   - transition-delay:     1s  0.5s  500ms   DELAY in start of transition
+                           can set each duration for each property, separated by comma
+
+   - transition-timing-function   transition is changed during time
+                                  ease | ease-in | ease-out | ease-in-out | linear | step-start
+                                  step-end | steps(10, start)  | steps(10, end) | cubic-bezier(....) 
+
+ Combined single rule:
+   - transition:   properties |  duration  | function  |  delay 

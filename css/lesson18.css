@@ -1,0 +1,47 @@
+.flex {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+.wrapper {
+	border: 3px blue solid;
+	background-color: aqua;
+	width: 150px;
+	height: 100px;
+	margin: 10px;
+}
+
+.one {
+	transition-duration: 1s;
+	transition-property: background-color;
+}
+.one:hover {
+	background-color: red;
+}
+
+.two {
+	transition-duration: 300ms;
+	transition-property: transform;
+}
+.two:hover {
+	transform: scale(2);
+}
+
+.three {
+	transition-delay: 1s;
+	transition-duration: 700ms;
+	transition-property: background-color;
+}
+.three:hover {
+	background-color: red;
+}
+
+.four {
+	transition-duration: 2s;
+	transition-property: background-color;
+	transition-property: transform;
+	transition-timing-function: steps(10, end);
+}
+.four:hover {
+	transform: scale(2.5);
+}
