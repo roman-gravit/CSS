@@ -808,3 +808,54 @@ Several animations can be set for single target element.
     
   - column-gap:    100px    space between columns
 
+
+##  38. Responsive design and media queries
+
+Responsive web pages looks good on desktop monitors, laptops and on smartphones. 
+
+There are some rules to make the page responsive:
+
+ - use of media queries: @media.  Apply css rules depending on page size, orientation, min-width height, pixel depth.
+
+	```
+    @media screen and print {       all(default) | screen | print | speach 
+        color: red;
+    }
+	```
+
+    Rules separators:  and | , | not
+    
+    Media functions:  
+
+    - width, height, min-width, max-width, min-height, max-height
+
+	- orientation: portrait | landscape
+    
+	- device-aspect-ratio: 16/9 | 1336/768
+    
+	- min-resolution:  2dppx, 300dpi
+    
+	- monochrome
+    
+	- color
+    
+	- grid
+
+	```
+    @media screen and (max-width: 990px)  and (orientation: portrait)  { 
+		color: red;
+    }
+    ```
+
+
+### Tasks of responsive design ###  
+
+ - Change number of columns depending on width
+ 
+ - Flexible width
+ 
+ - Decrease empty spaces
+    
+ - Size of the fonts
+    
+ - Hide some media content or simple content
