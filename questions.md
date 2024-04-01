@@ -669,3 +669,28 @@ Add visual effects for elements. Filters can be combined.
    - opacity:      (0-100%) 
    - url(file.svg#filter-element-id)    You can use url() to reference an SVG filter element. 
                                         For a reference to an SVG <filter> element, use the following syntax
+
+
+## 32. Elements  Transformations             
+
+Transformed element will **not touch the rounded elements**. Transforms can be combined.
+    
+  #### transform
+
+   - rotate         (deg)  can be negative-positive
+
+   - scale          (number)  0-1: decrease  >1:increase     (x, y):  x-acis y-acis
+                    scaleX, scaleY  the last in the code will be applyed
+                    Note: *Loop* feature can be done with scale and parent div overflow:hidden
+
+   - translate:     (horiz, vertic)  shift to right-bottom by default
+                    translateX, translateY
+
+   - skew:          (vertic, horiz) deg
+                    skewX, skewY
+
+**origin**: the basic point on which ol transformation occur, by default this is center of the image.
+    
+  - transform-origin:  right bottom left top  => change the basic point
+                       pixels, procenteges
+
