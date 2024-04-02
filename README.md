@@ -935,21 +935,15 @@ Improve and simplify the use of common CSS:
 
    - CSS-in-JS
           With the rise of JavaScript libraries like React, CSS-in-JS frameworks were created to let 
-          
           developers manipulate styles directly in JavaScript by including CSS in their JavaScript markup.
 
    - Component-Based Frameworks
-          Offer a set of pre-built UI components that developers can plug into their applications 
-
-          to assemble interfaces quickly. The goal is to provide a modular and reusable design system.
-          
+          Offer a set of pre-built UI components that developers can plug into their applications to assemble 
+          interfaces quickly. The goal is to provide a modular and reusable design system. 
           This is the origin of CSS frameworks.
 
    - Utility-First Frameworks
-          The idea behind utility-first frameworks is that CSS should not be descriptive and 
-
-          should not heavily rely on your markup. 
-
+          The idea behind utility-first frameworks is that CSS should not be descriptive and should not heavily rely on your markup. 
           Set of CSS styles and classes that only do one thing: m-10, в котором margin=2.2 rem
 
 
@@ -957,15 +951,12 @@ Improve and simplify the use of common CSS:
 
 - Bootstrap:  Ver 5: 2021
         Twitter introduced the framework in 2011 to make responsive web design easily accessible to developers.
-
         Contra: Overused, *all Bootstrap websites look the same*.  Component-Based
    
 - Tailwind:
         Released 2021. it does not provide a series of predefined classes for elements such as buttons or tables. 
-
         Instead, it creates a collection of "utility" CSS classes that can be used to style each element by mixing and matching.
-
-	      The names of these classes are intutively understandable: 
+        The names of these classes are intutively understandable: 
         
         For ex:  
         
@@ -974,17 +965,13 @@ Improve and simplify the use of common CSS:
         ```
 	
         Single class means single property:  mx-2 => margin-left: 0.5rem; margin-right: 0.5rem (mx: margin on axis X)
-        
         Utility-first CSS framework for rapid UI development.
  
 - Foundation: 
         Released 2011. This responsive front-end framework provides a grid, HTML, SASS, and CSS UI elements, templates, 
-
         and code that covers navigation, buttons, typography, forms, etc. 
-        
         It also comprises optional functionalities offered by JavaScript extensions
-        
-        CONTRA: 
+        Contra: 
             Relies on Javascript: Many of Foundation’s features rely on Javascript, using jQuery or Zepto.
             Hard to learn: Foundation comes with almost too many options.
             
