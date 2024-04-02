@@ -16,18 +16,18 @@
 	margin: 10px;
 }
 .img1 {
-	background-image: url("../image.jpg");
+	background-image: url("../img/image.jpg");
 }
 .img2 {
-	background-image: url("../image.jpg");
+	background-image: url("../img/image.jpg");
 	background-size: contain;
 }
 .img3 {
-	background-image: url("../image.jpg");
+	background-image: url("../img/image.jpg");
 	background-size: cover;
 }
 .img4 {
-	background-image: url("../image.jpg");
+	background-image: url("../img/image.jpg");
 	background-size: 25vw 35vh;
 	background-repeat: no-repeat;
 }

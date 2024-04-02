@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pseudo Elements</title>
+
+    <style>
+
+    :root { 
+        font-family: Segoe UI,Helvetica,Arial,sans-serif;
+        margin: 20px auto;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .header-row, .row {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    .header-cell {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .header-cell p {
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .cell {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .ex-after p::after {
+        content: ":) after";
+        color: blue;
+    }
+
+    .ex-before p::before {
+        content: "(: before";
+        color: red;
+    }
+
+    .ex-selection p::selection {
+        color: red;
+        background-color: aqua;
+    }
+
+    /** dont work for q */
+    .ex-first-letter q::first-letter,
+    .ex-first-letter p::first-letter {
+        color: red;
+        background-color: aqua;
+    }
+
+    /** dont work for q */
+    .ex-first-line q::first-line,
+    .ex-first-line p::first-line {
+        color: red;
+        background-color: aqua;
+    }
+
+    .ex-placeholder input::placeholder {
+        color: red;
+        background-color: rgb(217, 223, 223);
+    }
+
+    .ex-marker li {
+        text-align: left;
+    }
+    .ex-marker li::marker {
+        content: '✝ ';
+        font-size: 1.2em;
+    }
+
+    .ex-file-selection-button input::file-selector-button {
+        font-weight: bold;
+        color: dodgerblue;
+        padding: 0.5em;
+        border: thin solid grey;
+        border-radius: 7px;
+    }
+
+    </style>
+</head>
+<body>
+    <h4>Pseudo Elements: act as if you had added a whole new HTML element</h4>
+
+    <div class="header-row">
+        <div class="header-cell">
+            <p>Actual</p>
+            <pre> after  before  selection  first-letter  first-line  spelling-error  placeholder
+ part(shadow)  slotted(shadow)  marker  highlight(Range)  file-selection-button
+ grammar-error(user-agent) cue(WebVTT)  backdrop(dialog)
+            </pre>
+        </div>
+        <div class="header-cell">
+            <p>Experimental/Limited</p>
+            <pre>  view-transition-...  target-text  cue-region(WebVTextTrack)  
+  -webkit-meter-... -moz-range-...</pre>
+        </div>
+    </div>
+
+    <h5>Examples</h5>
+    <div class="row">
+        <div class="cell ex-after">
+            <strong>after</strong> insert content after element
+            <div>
+                <p>Have a good day!<br>new line of the text</p>
+            </div>
+        </div>
+        <div class="cell ex-before">
+            <strong>before</strong> insert content before element
+            <div>
+                <p>Have a good day!<br>new line of the text</p>
+            </div>
+        </div>
+        <div class="cell ex-selection">
+            <strong>selection</strong> add styles to the part of a document that has been highlighted by the user
+            <div>
+                <p>Have a good day! new line of the text</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell ex-first-letter">
+            <strong>first-letter</strong> applies styles to the first letter of the first line of a block container
+            <div>
+                <p>First letter of the P element</p>
+                <q>Dont work for element q</q>
+            </div>
+        </div>
+        <div class="cell ex-first-line">
+            <strong>first-line</strong> applies styles to the first line of a block container
+            <div>
+                <p>First letter of the P <br> element</p>
+                <q>Dont work for element q</q>
+            </div>
+        </div>
+        <div class="cell ex-placeholder">
+            <strong>placeholder</strong> represents the placeholder text in an input or textarea
+            <div>
+                <input name="email" placeholder="enter your email" type="email" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell ex-marker">
+            <strong>marker</strong> selects the marker box of a list item, which typically contains a bullet or number
+            <div>
+                <ul>
+                    <li>Malcolm Scott Carpenter</li>
+                    <li>Leroy Gordon (Gordo) Cooper Jr.</li>
+                  </ul>
+            </div>
+        </div>
+        <div class="cell ex-file-selection-button">
+            <strong>file-selection-button</strong> represents the button of an input of type="file".
+            <div>
+                <input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+            </div>
+        </div>
+        <div class="cell ex-placeholder">
+        </div>
+    </div>
+
+
+
+</body>
+</html>

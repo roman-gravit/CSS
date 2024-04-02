@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pseudo classes</title>
+
+    <style>
+
+    :root { 
+        font-family: Segoe UI,Helvetica,Arial,sans-serif;
+        margin: 20px auto;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .header-row, .row {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    .header-cell {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .header-cell p {
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .cell {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+
+    /** 
+        LVHA ORDER
+        a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! 
+        a:active MUST come after a:hover in the CSS definition in order to be effective 
+        link===NOT visited
+    */
+    .ex-a a:link {
+        color: red;
+    }
+    .ex-a a:visited {
+        color: blue;
+    }
+    .ex-a a:hover {
+        color: yellow;
+    }
+    .ex-a a:active {
+        color: grey;
+    }
+
+    .ex-a div:focus-within {
+        border: 2px dotted blue;
+    }
+
+    .ex-a div:empty {
+        border: 2px dotted red;
+        height: 20px;
+        width: 20px;
+    }
+
+
+    /** checkbox, radio, option inside select */
+    .ex-input {
+        font-size: 14px;
+    }
+    .ex-input input[type="text"]:read-only {
+        background: rgb(224, 243, 11);
+    }
+    .ex-input input[type="text"]:disabled:not(:read-only) {
+        background: rgb(224, 222, 222);
+    }
+    .ex-input input[type="text"]:enabled {
+        background: lightcyan;
+    }
+    .ex-input input[type="text"]:required {
+        background: red;
+    }
+    .ex-input input[type="checkbox"]:checked {
+        box-shadow : red 0 0 5px;
+    }
+    .ex-input input[type="text"]:optional {
+        color: red;
+    }
+    .ex-input input:invalid {
+        background-color: #640303;
+        color: white;
+    }
+    .ex-input input:valid {
+        background-color: rgb(133, 243, 133);
+        color: grey;
+    }
+    .ex-input input[type="text"]:focus {
+        box-shadow : red 0 0 5px;
+    }
+    .ex-input select:focus-visible {
+        border: 2px dashed blue;
+        border-radius: 3px;
+    }
+    .ex-input option:lang(ru) {
+        color: red;
+    }
+    .ex-input option:default {
+        color: greenyellow;
+    }
+
+
+    .ex-range {
+        font-size: 14px;
+    }
+    .ex-range input:in-range {
+        background-color: rgba(0, 255, 0, 0.25);
+    }
+    .ex-range input:out-of-range {
+        background-color: rgba(255, 0, 0, 0.25);
+        border: 2px solid red;
+    }
+    .ex-range :target {
+        border: 2px solid black;
+        background-color: yellow;
+    }
+
+
+
+
+
+    /** Only first child of parent node. Body cannot be parent, only other element. 
+    li:first-child {
+        background-color: green;
+    }
+
+    li:last-child {
+        background-color: red;
+    } */
+
+    /** Parent is not nessesery 
+    li:first-of-type {
+        background-color: black;
+    } 
+
+    li:only-child {
+        background-color: red;
+    }
+
+    li:nth-child(even) {
+        background-color: black;
+    } */
+
+
+
+
+
+
+
+
+
+    .cell:first-child,
+    .cell:last-child  {
+        border-bottom: 2px solid black;
+    }
+
+    </style>
+</head>
+<body>
+
+    <h4>Pseudo Classes: enable you to target an element when it's in a particular state</h4>
+
+    <div class="header-row">
+        <div class="header-cell">
+            <p>Actual</p>
+            <pre> active  any-link/link/visited  checked  default  dir  enabled/disabled   empty  hover
+   focus-within/focus/focus-visible   has()/is()/not()/where()  out-of-range/in-range  lang  
+   fullscreen   indeterminate    
+   optional/required   read-only/read-write   root   target   valid/invalid</pre>
+        </div>
+        <div class="header-cell">
+            <p>Experimental/Limited</p>
+            <pre></pre>
+        </div>
+    </div>
+
+    <h5>Examples</h5>
+    <div class="row">
+        <div class="cell ex-a">
+            <strong>link-red</strong> element that has not yet been visited
+            <strong>visited-blue</strong> element that has been visited
+            <strong>any-link</strong>  independent of whether link has been visited (a or area)
+            <strong>active-grey</strong> being activated by the user
+            <strong>hover-yellow</strong> when the user hovers over an element with the cursor (mouse pointer)
+            <strong>empty-red</strong> represents any element that has no children and no text
+            <div>
+                <a href="http://www.google.com">Google-visited</a> <br> 
+                <a href="http://www.yandex.com">Yandex-NOT-visited</a> <br>
+                <a href="http://www.ms.com">Google-any</a>
+                <div><!--empty--></div>
+            </div>
+        </div>
+        <div class="cell ex-input">
+            <strong>disabled-grey</strong> represents any disabled element
+            <strong>enabled-cyan</strong> represents any enabled element
+            <strong>required-red</strong> input, select or textarea element that has the required attribute set on it
+            <strong>readonly-lightyellow</strong> input or textarea that is not editable by the user
+            <strong>checked-red</strong> element that is checked or toggled to an on state
+            <strong>valid/invalid</strong> form, fieldset, input or other form element whose contents fail to validate.
+            <strong>lang</strong> matches elements based on the language 
+            <div>
+                <input type="text" placeholder="Disabled" disabled />
+                <input type="text" placeholder="Enabled" /><br>
+                <input type="text" placeholder="required" required/>
+                <input type="text" placeholder="readonly" readonly/><br>
+                <input type="checkbox" id="isexpanded" />Checkbox<br>
+                <form>
+                    <label>Введите URL:</label>
+                    <input type="text" />
+                    <br />
+                    <br />
+                    <label>Введите эл. почту:</label>
+                    <input type="email" required />
+                </form>   
+                <select name="flavor">
+                    <option lang="ru">Русский</option>
+                    <option lang="fr" selected="selected">France</option>
+                  </select>
+            </div>
+        </div>
+        <div class="cell ex-range">
+            <strong>out-of-range</strong> input element whose current value is outside the range limits specified by the min and max attributes
+            <strong>in-range</strong> min=1 max=10
+            <strong>target</strong> epresents a unique element (the target element) with an id matching the URL's fragment
+            <div>
+                <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+                <h5>Table of Contents</h5>
+                <a href="#p1">Jump to the first paragraph!</a><br>
+                <a href="#p2">Jump to the second paragraph!</a><br>
+                <a href="#nowhere">This link goes nowhere, because the target doesn't exist.</a>
+            
+                <h5>My Fun Article</h5>
+                <p id="p1">
+                You can target <i>this paragraph</i> using a URL fragment. Click on the link
+                above to try out!
+                </p>
+                <p id="p2">
+                This is <i>another paragraph</i>, also accessible from the links above. Isn't
+                that delightful?
+                </p>
+        </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p> (10) LISTS: first-child, last-child, first-of-type, last-of-type, only-child, only-of-type
+        nth-child(number | odd | even), nth-of-type, nth-last-child, nth-last-of-type </p>
+    <ul>
+        <li lang="fr">France</li>
+        <li>2</li>
+        <li lang="ru">Русский</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <ul>
+        <li>1</li>
+    </ul>
+
+    
+    <ul>
+        <li></li>
+        <li class="test">2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
