@@ -956,16 +956,17 @@ Improve and simplify the use of common CSS:
 - Tailwind:
         Released 2021. it does not provide a series of predefined classes for elements such as buttons or tables. 
         Instead, it creates a collection of "utility" CSS classes that can be used to style each element by mixing and matching.
-        The names of these classes are intutively understandable: 
+        The names of these classes are intutively understandable.
+        Single class means single property:  mx-2 => margin-left: 0.5rem; margin-right: 0.5rem (mx: margin on axis X)
+        Utility-first CSS framework for rapid UI development.
         
         For ex:  
         
         ```
-        <div class="py-4 mx-2 overflow-y-auto whitespace-nowrap">
+      <div class="py-4 mx-2 overflow-y-auto whitespace-nowrap"></div>
+        
         ```
 	
-        Single class means single property:  mx-2 => margin-left: 0.5rem; margin-right: 0.5rem (mx: margin on axis X)
-        Utility-first CSS framework for rapid UI development.
  
 - Foundation: 
         Released 2011. This responsive front-end framework provides a grid, HTML, SASS, and CSS UI elements, templates, 
