@@ -1202,7 +1202,9 @@ It can also be used on **pseudo-elements**, in which case the value of the attri
 
     ```
     html
-    <blockquote cite="https://web.dev/about/">Google believes in an open, accessible, private, and secure web.</blockquote>
+    <blockquote cite="https://web.dev/about/">
+        Google believes in an open, accessible, private, and secure web.
+    </blockquote>
 
     css
     blockquote::after {
