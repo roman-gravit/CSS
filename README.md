@@ -124,6 +124,7 @@ Improve and simplify the use of common CSS:
     It allows us to use features like variables, nesting, mixins, etc, all in a CSS-compatible syntax. 
     LESS is influenced by SASS and has influenced the newer “SCSS” syntax of SASS. 
     LESS was used in Bootstrap 3 but was replaced by SASS in Bootstrap 4.
+    https://mrmlnc.gitbooks.io/less-guidebook-for-beginners/content/
 
   - Stylus, PostCSS
 

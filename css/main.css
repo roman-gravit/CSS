@@ -1,0 +1,82 @@
+h1 {
+  color: blue;
+}
+h1 em {
+  color: red;
+}
+h1 em:hover {
+  background-color: #7f00ff;
+}
+.flex-container-common {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid #7f00ff;
+  min-height: 10vh;
+}
+.flex-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid #7f00ff;
+  min-height: 10vh;
+  flex-direction: row;
+}
+.flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid #7f00ff;
+  min-height: 10vh;
+}
+.flex-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid #7f00ff;
+  min-height: 10vh;
+  justify-content: space-between;
+}
+.flex-container4 {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #7f00ff;
+  /** The height must be set */
+  height: 20vh;
+  justify-content: space-between;
+}
+/*  item */
+.flex-item {
+  color: #fff;
+  text-align: center;
+  font: 900 20px "Roboto", sans-serif;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 5px;
+}
+.flex-item1 {
+  color: #fff;
+  text-align: center;
+  font: 900 20px "Roboto", sans-serif;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 50%;
+  padding: 5px;
+}
+.flex-item2 {
+  color: #fff;
+  text-align: center;
+  font: 900 20px "Roboto", sans-serif;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  width: calc(50% - 10px);
+  margin: 5px;
+}
+.flex-item3 {
+  color: #fff;
+  text-align: center;
+  font: 900 20px "Roboto", sans-serif;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 100px;
+}
+.flex-item4 {
+  color: #fff;
+  text-align: center;
+  font: 900 20px "Roboto", sans-serif;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 100px;
+}
