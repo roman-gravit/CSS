@@ -1129,7 +1129,7 @@ as the content grows while also avoiding unnecessary visuals when scrolling isn'
 
 ###  What is pseudo-class 
 
-A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element:
+A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element
 
 	:hover  
 	:visited  
