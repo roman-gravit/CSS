@@ -5,6 +5,24 @@
 	box-sizing: border-box;
 }
   
+
+h1 {
+	color: red;
+}
+
+/*
+h1 em {
+	color: green;
+}*/
+
+h1 {
+	em {
+		color: yellow;
+	}
+}
+
+
+
 .flex-container {
 	border: 5px solid #7f00ff;
 }

@@ -1,7 +1,8 @@
- # CSS
+# CSS
  
+## Common
 
- ## 1. What is CSS
+###  What is CSS
 
  CSS(Cascading Style Sheet: add visal effects to the HTML page.
  Number of rules which tell browser how to display elements on the page, color, font.
@@ -16,7 +17,7 @@ Superior styles to HTML − CSS has a much wider array of attributes than HTML,
 so CSS give a better look to HTML page in comparison to HTML attributes
 
 
-## 2. What is CSS rule 
+###  What is CSS rule 
 
 CSS rule consists of 2 elements:
  
@@ -27,7 +28,7 @@ CSS rule consists of 2 elements:
  Declaration block consists of property(color) and value(blue).
 
 
-## 3. Variants to add CSS 
+###  Variants to add CSS 
 
  - **Inline:**     Add style directly to the element via attribyte: 
  			   ```<div style="....">``` It can be ovverride only with !important
@@ -40,7 +41,7 @@ CSS rule consists of 2 elements:
  - **@import:**    Add style via import directive
 
 
-## 4. How many types of levels in style sheets
+###  How many types of levels in style sheets
 
  - **Inline:**              Specified for a specific occurrence of a tag and apply only to that tag. 
                         This is finegrain style, which defeats the purpose of style sheets - uniform style
@@ -74,11 +75,134 @@ Priorites of these levels are:
 	</style>
 	```
 
-## 5. What is style selector 
+###  Layout / painting / compositioning
+
+These ae the pahes of the web page render:
+
+ - Layout: calculate the postion of the element according to rules from CSS
+ 
+ - Painting: draw pixels for showing the visual elements
+ 
+ - Compositioning: rendering the layers in needed order (z-index)
+
+https://developer.mozilla.org/ru/docs/Web/Performance/Critical_rendering_path
+https://habr.com/ru/articles/224187/
+
+
+###  What is BEM
+
+The term BEM stands for Block-Element-Modifier, which is a naming convention for CSS class 
+
+names that helps to maintain a clear and consistent structure in a project's styling.
+
+Component approach for web development, of reusing the component
+
+
+
+###  What is CSS sprite                   
+
+CSS Sprites are a collection of images that are combined into a single file that an HTML document can access.
+Mostlikely is used for icons.
+
+Use: 
+  - background-position
+
+  - background-size
+
+  - background-image
+
+
+###  Whats is css preproperssing
+
+Programm can generates css from its own syntax: SASS, LESS, STILYS.
+Improve and simplify the use of common CSS:
+
+  - SASS(Syntactically Awesome Style Sheets). Sass works Ruby and processed on server side. 
+
+  - LESS(Leaner Style Sheets, developed in 2009) Is a backwards-compatible language extension for CSS. 
+    Can run on the client side or server side. 
+    It allows us to use features like variables, nesting, mixins, etc, all in a CSS-compatible syntax. 
+    LESS is influenced by SASS and has influenced the newer “SCSS” syntax of SASS. 
+    LESS was used in Bootstrap 3 but was replaced by SASS in Bootstrap 4.
+
+  - Stylus, PostCSS
+
+###  CSS stacking order 
+
+  - background/borders
+  - negative z-index       position: relative/absolute z-index <0
+  - block level boxes      display: block
+  - floating boxes         float: left
+  - inline boxes           display: inline inline-block 
+  - z-index = 0            position: relative/absolute z-index =0
+  - positive z-index       position: relative/absolute z-index > 0
+
+    https://habr.com/ru/articles/431046/
+
+
+###  CSS Frameworks
+
+#### Types of CSS Frameworks
+
+   - CSS-in-JS
+          With the rise of JavaScript libraries like React, CSS-in-JS frameworks were created to let 
+          developers manipulate styles directly in JavaScript by including CSS in their JavaScript markup.
+
+   - Component-Based Frameworks
+          Offer a set of pre-built UI components that developers can plug into their applications to assemble 
+          interfaces quickly. The goal is to provide a modular and reusable design system. 
+          This is the origin of CSS frameworks.
+
+   - Utility-First Frameworks
+          The idea behind utility-first frameworks is that CSS should not be descriptive and should not heavily rely on your markup. 
+          Set of CSS styles and classes that only do one thing: m-10, в котором margin=2.2 rem
+
+
+#### Frameworks
+
+- Bootstrap:  Ver 5: 2021
+        Twitter introduced the framework in 2011 to make responsive web design easily accessible to developers.
+        Contra: Overused, *all Bootstrap websites look the same*.  Component-Based
+   
+- Tailwind:
+        Released 2021. it does not provide a series of predefined classes for elements such as buttons or tables. 
+        Instead, it creates a collection of "utility" CSS classes that can be used to style each element by mixing and matching.
+        The names of these classes are intutively understandable.
+        Single class means single property:  mx-2 => margin-left: 0.5rem; margin-right: 0.5rem (mx: margin on axis X)
+        Utility-first CSS framework for rapid UI development.
+        
+        For ex:  
+        
+        ```
+      <div class="py-4 mx-2 overflow-y-auto whitespace-nowrap"></div>
+        
+        ```
+	
+ 
+- Foundation: 
+        Released 2011. This responsive front-end framework provides a grid, HTML, SASS, and CSS UI elements, templates, 
+        and code that covers navigation, buttons, typography, forms, etc. 
+        It also comprises optional functionalities offered by JavaScript extensions
+        Contra: 
+            Relies on Javascript: Many of Foundation’s features rely on Javascript, using jQuery or Zepto.
+            Hard to learn: Foundation comes with almost too many options.
+            
+- Bulma:
+        Modern CSS framework based on Flexbox.
+
+... to be continued
+
+
+https://github.com/troxler/awesome-css-frameworks
+
+## Style selectors and cascading
+
+###  What is style selector 
 
 Selector is a part of the css rule. It can help to choose the element and set style for it.
    
-### Simple selectors(containt single selector):                                               
+
+###  Simple selectors(containt single selector):                                               
    	
  - universal(*): For all child elements, can be use for reset(normalize) css rules
 
@@ -95,7 +219,7 @@ Use *id* selector if you want to add some logic for exact element.
 Use *class* selector for styling the set of elements.
 
 
-### Complex selector(several)
+###  Complex selector(several)
 
  - Group selectors: Divided by comma, ex:  ```h1, h2, h3 { color: red; }```
 
@@ -167,7 +291,7 @@ Combinator explains the relationship between the selectors. There are four combi
  - descendent selector (space)
 
 
-## 6. What is specificity of the selectors
+###  What is specificity of the selectors
 
 Specificity is the algorithm used by browsers to determine the CSS declaration that is 
 the most relevant to an element, which in turn, determines the property value to apply to the element.
@@ -206,40 +330,7 @@ Need to summarize all selectors for the rule. Examples:
 | #test:not(.main)     | 100+10=110
 
 
-## 7. What is pseudo-class 
-
-A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element:
-
-	:hover  
-	:visited  
-	:active 
-	:focus
-	:first-child :last-child  
-	:nth-child(even)  
-	:nth-child(odd)  
-	:nth-child(n)  
-	:nth-child(2n) 
-	:nth-child(3n+1)
-	:first-of-type  
-	:last-of-type   
-	:nth-of-type
-	:not
-
-
-## 8. What is pseudo-element 
-
-Added to css selector with :: and changed the element structure:
-
-	::first-line  
-	::first-letter  
-	::marker  
-	::placeholder
-    ::selection (only for color and background-color)
-    ::after 
-	::before (with content only)
-
-
-## 9. CSS Cascade
+###  CSS Cascade
 
 The cascade is an algorithm that defines how user agents combine property values originating from different sources.
 When a selector matches an element, the property value from the origin with the highest precedence gets applied, 
@@ -266,7 +357,7 @@ More details
 | 5. Order of appearance       | The last declaration in the style order is applied
 
 
-## 10. Cascading inheritance
+###  Cascading inheritance
 
  - There are properties which can be inherit: font, color...
 
@@ -277,7 +368,22 @@ More details
 Note: Each browser has its onw table of default styles for elements. 
 
 
-## 11. Whats is cross browsing CSS compatibility
+
+## Cross browsers problems
+
+###  Vender prefix and why do we need it 
+
+  --webkit-opacity   
+  --moz-opacity
+  --o-opacity
+  --ms-opacity
+    
+This css property is under construction or tesing in specific browser.
+Or this property is not in standart yet.
+    
+Note: Resource for tesing vender properties: caniuse.com
+
+###  Whats is cross browsing CSS compatibility
 
 Browser has its own styling. Need to correct behaviour on different browsers in order
 that your design looks the same on different browsers. Two main approaches:
@@ -289,7 +395,171 @@ that your design looks the same on different browsers. Two main approaches:
 Inlcude reset/normilize.css as first css in you page.
 
 
-## 12. Block/Inline model CSS 
+###  How to detremine with the help of CSS that property is supported by browser
+
+The @supports CSS at-rule lets you specify CSS declarations that depend on a browser's support for CSS features. 
+
+Using this at-rule is commonly called a feature query. The rule must be placed at the top level of your code or nested 
+
+inside any other conditional group at-rule.
+
+    ```
+    @supports (display: flex) {
+        .flex-container > * {
+          text-shadow: 0 0 2px blue;
+          float: none;
+        }
+    }
+    ```
+
+###  How to fix specific problems in CSS for different browsers
+
+- Use reset.css  or normilize.css
+
+- Divide different styles for different browsers
+
+- Use of Autoprefixer: is a PostCSS plugin which parses your CSS and adds vendor prefixes
+
+
+
+## Common design practices and approaches
+
+###  How to maintain common CSS coding style in big projects
+
+  - style guids
+  - vars and mixins
+  - version control
+  - Stylelint
+  - CSS metodologies (BEM, SMACSS, OOCSS)
+
+
+###  How to organize scalable CSS code
+
+ - use css modules
+
+ - use CSS preprocessors
+
+ - use semantic classes
+
+ - use methodolgies: SMACSS | OOCSS | BEM
+
+https://habr.com/ru/articles/256109/ [2015]
+https://medium.com/@companjero/%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-smacss-e601222cd4eb
+https://medium.com/@stepanovv.ru/%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-css-oocss-smacss-bem-%D0%B8-sass-49351a119283
+
+
+###  ```@container```  queries
+
+Container queries enable you to apply styles to an element based on the size of the element's container. 
+
+If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+
+Container queries are an alternative to media queries, which apply styles to elements based on viewport size or other device characteristics.
+
+    ```
+    /* If the container is larger than 700px */
+    @container (min-width: 700px) {
+        .card h2 {
+            font-size: 2em;
+        }
+    }
+    ```
+
+###  Responsive design and ```@media``` queries
+
+Responsive web pages looks good on desktop monitors, laptops and on smartphones. 
+
+There are some rules to make the page responsive:
+
+ - use of media queries: @media.  Apply css rules depending on page size, orientation, min-width height, pixel depth.
+
+	```
+    @media screen and print {       all(default) | screen | print | speach 
+        color: red;
+    }
+	```
+
+    Rules separators:  and | , | not
+    
+    Media functions:  
+
+    - width, height, min-width, max-width, min-height, max-height
+
+	- orientation: portrait | landscape
+    
+	- device-aspect-ratio: 16/9 | 1336/768
+    
+	- min-resolution:  2dppx, 300dpi
+    
+	- monochrome
+    
+	- color
+    
+	- grid
+
+	```
+    @media screen and (max-width: 990px)  and (orientation: portrait)  { 
+		color: red;
+    }
+    ```
+
+###   *prefers-reduced-motion*  media feature
+
+The prefers-reduced-motion CSS media feature is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. 
+
+The setting is used to convey to the browser on the device that the user prefers an interface that removes, reduces, or replaces motion-based animations.
+
+
+###  Tasks of responsive design 
+
+ - Change number of columns depending on width
+ 
+ - Flexible width
+ 
+ - Decrease empty spaces
+    
+ - Size of the fonts
+    
+ - Hide some media content or simple content
+
+
+###  What is the difference between adaptive and responsive design
+
+  -- Adaptive: several versions of the same website which loaded depending on device its open.
+	       Css/html will be loaded depending on user device
+
+  -- Responsive: rebuild the screen depending on screen size and orientation.
+	         One set of css/html files.
+
+
+###  Difference between Progressive Enchancement and Graceful Degradation
+
+These approaches are used for created cross-platform and cross-browser apps
+
+  - GD: Create Web UI for complex solution, then try to test and fix for simplest(mobile) or out-of-date browsers.
+
+  - PE: Create UI from simple to complex. In each phase the web ui is created as an enchancement from the previous phase. 
+
+
+
+## Elements styling
+
+###  Global css keywords initial/inherit/revert/unset
+
+ - **initial** CSS keyword applies the initial (or default) value of a property to an element.
+
+ - **inherit** CSS keyword causes the element to take the computed value of the property from its parent element(for inherited properties only)
+
+ - **revert**  CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current style origin to the current element of the current browser 
+
+ - **unset** CSS keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its initial value if not. 
+ 
+     1) it behaves like the *inherit* keyword in the first case, when the property is an inherited property
+    
+     2) it behaves like the *initial* keyword in the second case, when the property is a non-inherited property.
+
+
+###  Block/Inline model CSS, display property
 
 *Block* element will take the whole line and *Inline* element take the inline place. 
 
@@ -308,6 +578,8 @@ The *display* CSS property sets whether an element is treated as a block or inli
   - **flex:** Displays an element as a block-level flex container. Setup flexible layout
 
   - **grid:** Displays an element as a block-level grid container
+
+  - **inline-flex** | **inline-grid** | **table** | **table-cell**
 
  #### Margin 
 
@@ -343,12 +615,12 @@ The *display* CSS property sets whether an element is treated as a block or inli
    NOTE4: If we want to width will be 50px set box-sizing: border-box;
 
 
-##  13. What is margins collapse
+###  What is margins collapse
 
 Vertical margins (top-bottom) are collapsed for 2 blocked elements.
 
 
-##  14. Positioning in CSS  
+###  Positioning in CSS  
 
 We get HTML document, browser start to parse it and build DOM tree. Interpretator finds CSS and starts 
 to read it also. All elements are situated in the one main flow.
@@ -370,8 +642,24 @@ to read it also. All elements are situated in the one main flow.
   - **sticky:**    The element is positioned according to the normal flow of the document 
   			   and then offset relative to its nearest scrolling ancestor
 
+###  What is the difference between display: none and visibility: hidden
 
-##  15. Sizes of the element
+Both will hide the element
+  - display:none  -> element will be removed from the flow. Content is hidden 
+	                   for the search engines  
+  
+  - visibility: hidden -> just hide the element, but is still takes place, also
+	                        avaliable for search engines
+
+
+###  What is the difference between margin and padding
+   
+  - margin: outer space of the element, out of the border
+  
+  - padding: inner space of the element betweeb content and border 
+
+
+###  Sizes of the element
 
   - width 
   - height
@@ -381,7 +669,7 @@ to read it also. All elements are situated in the one main flow.
   - max-height
 
 
-## 16. Units of sizes in CSS
+###  Units of sizes in CSS
 
   #### Absolute
 	- px:  pixels 
@@ -408,7 +696,7 @@ to read it also. All elements are situated in the one main flow.
     function calc for with height =>  width: calc(100vh-100px) 
 
 
-## 17. z-index                       
+###  z-index                       
 
 **z-index** determines the order of the element on the z-axis of the stacking context.
 Otherwise: the order how they appear in HTML document.
@@ -421,7 +709,7 @@ Max for z-index=9999, can be negative.
 https://habr.com/ru/articles/431046/
  
 
-## 18. Overflow of the element content
+###  Overflow of the element content
 
  #### Overflow
  - auto:    scrollbar will appear IF overflow
@@ -431,7 +719,7 @@ https://habr.com/ru/articles/431046/
 More precise: overflow-x, overflow-y
 
 
-## 19. Floating elements (legacy => use flex)
+###  Floating elements (legacy => use flex)
     
   **float** 
    - REMOVES element from main flow: BUT *inline* elements still see it
@@ -447,7 +735,7 @@ More precise: overflow-x, overflow-y
 RESUME: Its very complex with several nuances. USE FLEX!
 
 
-## 20. Setup font, text styles  
+###  Setup font, text styles  
 
 *Safe fonts* - this font can be found on user computer. But it depends on OS.
     
@@ -504,9 +792,8 @@ The best browser compatibility is for TTF/OTF, WOFF, WOFF2
 - SVG Fonts/Shapes:  SVG fonts allow SVG to be used as glyphs when displaying text. 
 
 
-## 21. Border             
+###  border             
 
- #### Border 
   - border-width:
   - border-style:  none, solid, dashed, dotted, double, groove, inset, upset   
   - border-color:  
@@ -515,12 +802,12 @@ The best browser compatibility is for TTF/OTF, WOFF, WOFF2
 More precise: border-left, border-right, border-top, border-bottom
               border-left-color ......
 
- #### Outline 
+###  outline
 
- An outline is a line drawn outside the element's border.
- An outline is a line that is drawn around elements, OUTSIDE the borders.
- It **don't change the size of the box element** and can be set only for **all four side**.
- But it helps for accessibility: it is border for element on focus
+An outline is a line that is drawn around elements, OUTSIDE the borders.
+
+It **don't change the size of the box element** and can be set only for **all four side**.
+But it helps for accessibility: it is border for element on focus
 
   - outline-style
   - outline-color
@@ -529,7 +816,7 @@ More precise: border-left, border-right, border-top, border-bottom
   - outline
 
 
-## 22. Shadows 
+###  Shadows 
 
 #### On element:
   - box-shadow:  inset | length | length | color
@@ -543,7 +830,7 @@ More precise: border-left, border-right, border-top, border-bottom
  Several shadows can be set, separated by comma
 
 
-## 23. Round corners
+###  Round corners
 
 
  - border-radius:    40px:  all  OR  
@@ -553,7 +840,7 @@ More precise: border-left, border-right, border-top, border-bottom
 More precise: border-top-left, border-top-right, border-bottom-left, border-bottom-right
 
 
-##  24. Lists                                
+###  Lists                                
 
  #### ol/ul
 
@@ -564,7 +851,7 @@ More precise: border-top-left, border-top-right, border-bottom-left, border-bott
  NOTE1: image size cannot be set in css
 
 
-##  25. Colors                                
+###  Colors                              
 
 Note 1: **Specificationdefined named colors** (CSS 2.1): red, navy, white, yellow, red ....
 
@@ -577,9 +864,15 @@ Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBo
   - HSL(0, 100%, 50%), hue(оттенок)-saturaton(насыщенность)-lighness(священность)
     
   - RGBA, HSLA  => (alpha channel ~ opacity)
-     
 
-**currentcolor** Keyword:  refers to the value of the color property of an element
+  - transparent
+
+  - currentColor
+
+
+###  What is currentColor keyword
+
+**currentColor** Keyword:  refers to the value of the color property of an element
 
 	```
 	.class {
@@ -588,7 +881,7 @@ Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBo
 	}
 	```
 
-##  26. Hide elements    
+###  Hide elements    
 
   - display: none
     Totaly remove element from the flow and DOM and not visible for SEO
@@ -600,29 +893,32 @@ Note 2: DEPRECATED BY CSS3: CSS **system colors** (introduced by CSS2): ActiveBo
     Was **not deleted** from flow, its still visible for search engines.
 
 
-##  27. Vender prefix and why do we need it 
 
-  --webkit-opacity   
-  --moz-opacity
-  --o-opacity
-  --ms-opacity
+###  Text effects                         
+
+  - text-overflow:  ellipsis - ...
+                    clip - text will be cuted
     
-This css property is under construction or tesing in specific browser.
-Or this property is not in standart yet.
+  - white-space:    nowrap - single line
     
-Note: Resource for tesing vender properties: caniuse.com
+  - word-wrap:      break-word - word will be wrap to next line
+  
+  - word-break:     normal(default) | break-all;
+
+  - writing-mode:   vertical  vertical-lr
+
+ Multicolumn  text can be divided to columns. Need to set in parent element (```<div>```)
+
+  - column-count:  N
+    
+  - column-rule:   1px solid grey
+    
+  - column-width:  auto(default) | 300px
+    
+  - column-gap:    100px    space between columns
 
 
-## 28. What is BEM
-
-The term BEM stands for Block-Element-Modifier, which is a naming convention for CSS class 
-
-names that helps to maintain a clear and consistent structure in a project's styling.
-
-Component approach for web development, of reusing the component
-
-
-## 29. Background
+###  Background
 
   - background-color:      color
   - background-image:      url(...)
@@ -639,7 +935,7 @@ Summary:
 Note: Separated by comma, we can add several background images
 
 
-## 30. Gradient                              
+###  Gradient                              
 
   #### linear                               
     - background/background-image: linear-gradient(90dep,   black,   white..... other colors)
@@ -650,11 +946,11 @@ Note: Separated by comma, we can add several background images
                   closest-side  closest-corner  farhtest-side  farthest-corner
 				  repeating-radial-gradient
 
-## 31. Filters                             
+###  Filters                             
 
 Add visual effects for elements. Filters can be combined.
     
-  #### filter 
+  **filter** 
    - blur:         blur deapth   2px
    - drop-shadow:  horiz shift    vertic shift    blur  цвет 
                    NOTE: shadow will be applyed to *content* of the pseudo after/before also
@@ -671,11 +967,11 @@ Add visual effects for elements. Filters can be combined.
                                         For a reference to an SVG <filter> element, use the following syntax
 
 
-## 32. Elements  Transformations             
+###  Elements Transformations             
 
 Transformed element will **not touch the rounded elements**. Transforms can be combined.
     
-  #### transform
+  **transform**
 
    - rotate         (deg)  can be negative-positive
 
@@ -694,7 +990,7 @@ Transformed element will **not touch the rounded elements**. Transforms can be c
   - transform-origin:  right bottom left top  => change the basic point
                        pixels, procenteges
 
-## 33. Transitions                           
+###  Transitions                           
 
   ####  transition
 
@@ -715,7 +1011,7 @@ Transformed element will **not touch the rounded elements**. Transforms can be c
    - transition:   properties |  duration  | function  |  delay 
 
 
-## 34. Animations                          
+###  Animations                          
 
 Animation can do multiply transitions in many loops, also it can be stopped.
 
@@ -756,7 +1052,7 @@ Combined single rule:
 Several animations can be set for single target element.
 
 
-##  35. Tables                               
+###  Tables                               
 
   - **border**:             1px soild red;
 
@@ -774,7 +1070,7 @@ Several animations can be set for single target element.
   - **empty-cells:**        show(default) | hide 
 
 
-##  36. Cursors                              
+###  Cursors                              
 
   - **pointer-events:**  Sets under what circumstances (if any) a particular graphic element can become the target 
   						 of pointer events. Can be used for disabled buttons or prohibit text selection. 
@@ -785,91 +1081,29 @@ Several animations can be set for single target element.
   - **url(...):** image for cursor
 
 
-##  37. Text effects                         
+###  pointer-events property
 
-  - text-overflow:  ellipsis - ...
-                    clip - text will be cuted
-    
-  - white-space:    nowrap - single line
-    
-  - word-wrap:      break-word - word will be wrap to next line
-  
-  - word-break:     normal(default) | break-all;
+Sets under what circumstances (if any) a particular graphic element can become the target of pointer events. 
 
-  - writing-mode:   vertical  vertical-lr
+Can be used for disabled buttons or prohibit text selection. 
 
- Multicolumn  text can be divided to columns. Need to set in parent element (```<div>```)
+  - auto(default) 
 
-  - column-count:  N
-    
-  - column-rule:   1px solid grey
-    
-  - column-width:  auto(default) | 300px
-    
-  - column-gap:    100px    space between columns
+  - none
+
+  - stroke (svg only)
+
+  - fill (svg only)
 
 
-##  38. Responsive design and media queries
-
-Responsive web pages looks good on desktop monitors, laptops and on smartphones. 
-
-There are some rules to make the page responsive:
-
- - use of media queries: @media.  Apply css rules depending on page size, orientation, min-width height, pixel depth.
-
-	```
-    @media screen and print {       all(default) | screen | print | speach 
-        color: red;
-    }
-	```
-
-    Rules separators:  and | , | not
-    
-    Media functions:  
-
-    - width, height, min-width, max-width, min-height, max-height
-
-	- orientation: portrait | landscape
-    
-	- device-aspect-ratio: 16/9 | 1336/768
-    
-	- min-resolution:  2dppx, 300dpi
-    
-	- monochrome
-    
-	- color
-    
-	- grid
-
-	```
-    @media screen and (max-width: 990px)  and (orientation: portrait)  { 
-		color: red;
-    }
-    ```
-
-
-### Tasks of responsive design ###  
-
- - Change number of columns depending on width
- 
- - Flexible width
- 
- - Decrease empty spaces
-    
- - Size of the fonts
-    
- - Hide some media content or simple content
-
-
-
-##  39. Placeholders styling                 
+###  Placeholders styling                 
 
 Use **::placeholder**  pseudo-class for changing placeholder style.
     
 It will not work for complex elements (date, or smth with dropdown)
 
 
-##  40. Scrollbars styling                    
+###  Scrollbars styling                    
 
   - webkit-scrollbar:           the whole scrollbat itself
   
@@ -880,106 +1114,100 @@ It will not work for complex elements (date, or smth with dropdown)
   - webkit-scrollbar-button:    the buttons on the scrollbar (arrows pointing upwards and downwards)
 
 
-##  41. What is CSS sprite                   
+###  scrollbar-gutter property (limited functionality)
 
-CSS Sprites are a collection of images that are combined into a single file that an HTML document can access.
-Mostlikely is used for icons.
+Solve the problem when the content fleshes after the scrollbar appear/disappear.
+The scrollbar-gutter CSS property allows authors to reserve space for the scrollbar, preventing unwanted layout changes 
+as the content grows while also avoiding unnecessary visuals when scrolling isn't needed.
 
-Use: 
-  - background-position
-
-  - background-size
-
-  - background-image
+ - auto
+ - stable
+ - stable both-edges
 
 
-##  42. Difference between Progressive Enchancement and Graceful Degradation
+## Pseudo classes and elements
 
-These approaches are used for created cross-platform and cross-browser apps
+###  What is pseudo-class 
 
-  - GD: Create Web UI for complex solution, then try to test and fix for simplest(mobile) or out-of-date browsers.
+A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element:
 
-  - PE: Create UI from simple to complex. In each phase the web ui is created as an enchancement from the previous phase. 
+	:hover  
+	:visited  
+	:active 
+	:focus
+	:first-child 
+	:not
 
-
-## 43. Whats is css preproperssing
-
-Programm can generates css from its own syntax: SASS, LESS, STILYS.
-Improve and simplify the use of common CSS:
-
-  - SASS(Syntactically Awesome Style Sheets). Sass works Ruby and processed on server side. 
-
-  - LESS(Leaner Style Sheets, developed in 2009) Is a backwards-compatible language extension for CSS. 
-    Can run on the client side or server side. 
-    It allows us to use features like variables, nesting, mixins, etc, all in a CSS-compatible syntax. 
-    LESS is influenced by SASS and has influenced the newer “SCSS” syntax of SASS. 
-    LESS was used in Bootstrap 3 but was replaced by SASS in Bootstrap 4.
-
-
-## 44. CSS stacking order 
-
-  - background/borders
-  - negative z-index       position: relative/absolute z-index <0
-  - block level boxes      display: block
-  - floating boxes         float: left
-  - inline boxes           display: inline inline-block 
-  - z-index = 0            position: relative/absolute z-index =0
-  - positive z-index       position: relative/absolute z-index > 0
-
-    https://habr.com/ru/articles/431046/
+Added in CSS3
+	:nth-child(n)  
+    :nth-last-child(n)  
+    :last-child (n)
+    :only-child
+    :nth-of-type(n)
+	:first-of-type  
+	:last-of-type   
+	:nth-child(even)  
+	:nth-child(odd)  
+	:nth-child(2n) 
+	:nth-child(3n+1)
 
 
-## 45. CSS Frameworks
+###  What is pseudo-element 
 
-### Types of CSS Frameworks ###
+Added to css selector with :: and changed the element structure
 
-   - CSS-in-JS
-          With the rise of JavaScript libraries like React, CSS-in-JS frameworks were created to let 
-          developers manipulate styles directly in JavaScript by including CSS in their JavaScript markup.
-
-   - Component-Based Frameworks
-          Offer a set of pre-built UI components that developers can plug into their applications to assemble 
-          interfaces quickly. The goal is to provide a modular and reusable design system. 
-          This is the origin of CSS frameworks.
-
-   - Utility-First Frameworks
-          The idea behind utility-first frameworks is that CSS should not be descriptive and should not heavily rely on your markup. 
-          Set of CSS styles and classes that only do one thing: m-10, в котором margin=2.2 rem
+	::first-line  
+	::first-letter  
+	::marker  
+	::placeholder
+    ::selection (only for color and background-color)
+    ::after 
+	::before (with content only)
 
 
-### Frameworks ###
+###  Difference between pseudo-class and pseudo-element
 
-- Bootstrap:  Ver 5: 2021
-        Twitter introduced the framework in 2011 to make responsive web design easily accessible to developers.
-        Contra: Overused, *all Bootstrap websites look the same*.  Component-Based
-   
-- Tailwind:
-        Released 2021. it does not provide a series of predefined classes for elements such as buttons or tables. 
-        Instead, it creates a collection of "utility" CSS classes that can be used to style each element by mixing and matching.
-        The names of these classes are intutively understandable.
-        Single class means single property:  mx-2 => margin-left: 0.5rem; margin-right: 0.5rem (mx: margin on axis X)
-        Utility-first CSS framework for rapid UI development.
-        
-        For ex:  
-        
-        ```
-      <div class="py-4 mx-2 overflow-y-auto whitespace-nowrap"></div>
-        
-        ```
-	
- 
-- Foundation: 
-        Released 2011. This responsive front-end framework provides a grid, HTML, SASS, and CSS UI elements, templates, 
-        and code that covers navigation, buttons, typography, forms, etc. 
-        It also comprises optional functionalities offered by JavaScript extensions
-        Contra: 
-            Relies on Javascript: Many of Foundation’s features rely on Javascript, using jQuery or Zepto.
-            Hard to learn: Foundation comes with almost too many options.
-            
-- Bulma:
-        Modern CSS framework based on Flexbox.
+  - class: specifies a special state of the selected element, which can be change after user action or smth else
 
-... to be continued
+  - element: change the element structure and add virtual elements
 
+###  pseudo-elements for text selection
 
-https://github.com/troxler/awesome-css-frameworks
+    ::selection (only for color and background-color)
+    ::grammar-error  (experimental)
+    ::spelling-error (experimental)
+    ::target-text    (experimental)
+
+###  :inavlid/valid pseudo-classes 
+
+The :invalid CSS pseudo-class represents any *form*, *fieldset*, *input* or other *form* element whose contents fail to validate.
+This pseudo-class is useful for highlighting field errors for the user.
+
+The :valid CSS pseudo-class represents any *input* or other *form* element whose contents validate successfully. 
+This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
+
+###  :has() pseudo-class
+
+The functional :has() CSS pseudo-class represents an element if any of the relative selectors that are passed as an 
+argument match at least one element when anchored against this element. 
+This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element
+by taking a relative selector list as an argument.
+It does NOT add any addiotional weight to selector specificity.
+
+###  What is *attr*
+
+The attr() CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. 
+
+It can also be used on **pseudo-elements**, in which case the value of the attribute on the pseudo-element's originating element is returned.
+
+    ```
+    html
+    <blockquote cite="https://web.dev/about/">Google believes in an open, accessible, private, and secure web.</blockquote>
+
+    css
+    blockquote::after {
+        display: block;
+        content: ' (source: ' attr(cite) ') ';
+        color: hotpink;
+    }
+    ```
